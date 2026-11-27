@@ -1,0 +1,438 @@
+{
+  "screen": "P0002 首页",
+  "reference_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1451-139",
+  "reference_image": "../../references/screens/home-and-follow/P0002-home.png",
+  "frame_px": [
+    750,
+    3540
+  ],
+  "viewport_css_px": 375,
+  "relative_files_from": "assets/ui",
+  "assets": [
+    {
+      "id": "manager-home",
+      "label": "首页经理形象",
+      "group": "character",
+      "file": "characters/manager-home@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1829",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        301,
+        419
+      ],
+      "frame_box_px": [
+        68,
+        259,
+        75.23,
+        104.6
+      ],
+      "display_css_px_at_375": [
+        37.62,
+        52.3
+      ],
+      "sha256": "36d8dbda10b583265d8ed954775b46b126aef618eb8061d9061f043e07556d34",
+      "note": "直接按原稿宽高比显示，保留图层自身的上下和左右留白。"
+    },
+    {
+      "id": "all-funds",
+      "label": "全部基金",
+      "group": "shortcut",
+      "file": "icons/shortcuts/all-funds@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "imagegen_bitmap_restoration_matched_to_original",
+      "png_px": [
+        280,
+        280
+      ],
+      "frame_box_px": [
+        46,
+        123,
+        70,
+        70
+      ],
+      "display_css_px_at_375": [
+        35.0,
+        35.0
+      ],
+      "sha256": "34919dcc4fca3f5bc93efd686de4b02dada720f1ef69c47775791a52d4c6b38d",
+      "note": "包含白色圆角底板，入口文字为原生文本。"
+    },
+    {
+      "id": "watchlist",
+      "label": "我的自选",
+      "group": "shortcut",
+      "file": "icons/shortcuts/watchlist@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "imagegen_bitmap_restoration_matched_to_original",
+      "png_px": [
+        280,
+        280
+      ],
+      "frame_box_px": [
+        193,
+        123,
+        70,
+        70
+      ],
+      "display_css_px_at_375": [
+        35.0,
+        35.0
+      ],
+      "sha256": "83e1de601aca8e4f916424aad81d9841f7b4811af18d471d5627967e85c91ff7",
+      "note": "包含白色圆角底板，入口文字为原生文本。"
+    },
+    {
+      "id": "cash-management",
+      "label": "活期通",
+      "group": "shortcut",
+      "file": "icons/shortcuts/cash-management@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "approved_bitmap_extract_4x",
+      "png_px": [
+        280,
+        280
+      ],
+      "frame_box_px": [
+        340,
+        123,
+        70,
+        70
+      ],
+      "display_css_px_at_375": [
+        35.0,
+        35.0
+      ],
+      "sha256": "42947f53597bd64d4b75563c97902e7186a633e94d125c39879b4b13c43d3225",
+      "note": "保留原稿中文字标形状。"
+    },
+    {
+      "id": "family-account",
+      "label": "亲子账户",
+      "group": "shortcut",
+      "file": "icons/shortcuts/family-account@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "imagegen_bitmap_restoration_matched_to_original",
+      "png_px": [
+        280,
+        280
+      ],
+      "frame_box_px": [
+        487,
+        123,
+        70,
+        70
+      ],
+      "display_css_px_at_375": [
+        35.0,
+        35.0
+      ],
+      "sha256": "8026acaccc1cf98be33c7943954320c547a70319c6b7b427c778d8ff6f90ae98",
+      "note": "包含白色圆角底板，入口文字为原生文本。"
+    },
+    {
+      "id": "rewards",
+      "label": "积分兑好礼",
+      "group": "shortcut",
+      "file": "icons/shortcuts/rewards@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "imagegen_bitmap_restoration_matched_to_original",
+      "png_px": [
+        280,
+        280
+      ],
+      "frame_box_px": [
+        633,
+        123,
+        70,
+        70
+      ],
+      "display_css_px_at_375": [
+        35.0,
+        35.0
+      ],
+      "sha256": "3af04170d8d5c9bcd9a061b008abdbeccfc9617a8016d398a67dcd21fcf91b24",
+      "note": "包含白色圆角底板，入口文字为原生文本。"
+    },
+    {
+      "id": "message-button",
+      "label": "消息（含红点与圆底）",
+      "group": "header",
+      "file": "icons/header/message-button@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "approved_bitmap_extract_4x",
+      "png_px": [
+        240,
+        240
+      ],
+      "frame_box_px": [
+        26,
+        27,
+        60,
+        60
+      ],
+      "display_css_px_at_375": [
+        30.0,
+        30.0
+      ],
+      "sha256": "8642ed1d6b99c4568d4ec5558ca6c5a7249e7990efee9f3d5d07c24c3b4273db",
+      "note": "保留圆底和红点，额外消息状态以原稿为准。"
+    },
+    {
+      "id": "search-glyph",
+      "label": "搜索放大镜",
+      "group": "header",
+      "file": "icons/header/search-glyph@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1847",
+      "method": "approved_bitmap_extract_4x",
+      "png_px": [
+        120,
+        120
+      ],
+      "frame_box_px": [
+        683,
+        42,
+        30,
+        30
+      ],
+      "display_css_px_at_375": [
+        15.0,
+        15.0
+      ],
+      "sha256": "c9c717b0e2599ea56c13b6ea5de81b652b3be428f6bb1b47c89417ba9ed18f6d",
+      "note": "白色透明图标，用于原稿红色搜索栏。"
+    },
+    {
+      "id": "home-active",
+      "label": "首页（选中）",
+      "group": "navbar",
+      "file": "icons/navbar/home-active@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=I1451-310%3B0-17783",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        160,
+        160
+      ],
+      "frame_box_px": [
+        58,
+        3398,
+        40,
+        40
+      ],
+      "display_css_px_at_375": [
+        20.0,
+        20.0
+      ],
+      "sha256": "f801e26c43cc6e7564b43216ca51cd60773e7bf1f88faa638903ac62461423e4"
+    },
+    {
+      "id": "valuation-inactive",
+      "label": "行情估值（未选）",
+      "group": "navbar",
+      "file": "icons/navbar/valuation-inactive@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=I1451-310%3B0-17789",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        160,
+        160
+      ],
+      "frame_box_px": [
+        204,
+        3398,
+        40,
+        40
+      ],
+      "display_css_px_at_375": [
+        20.0,
+        20.0
+      ],
+      "sha256": "b46e4c7e98391681657eebc0dbf333969850c11f0216e60b2535128ce2ee9023"
+    },
+    {
+      "id": "assets-inactive",
+      "label": "资产（未选）",
+      "group": "navbar",
+      "file": "icons/navbar/assets-inactive@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=I1451-310%3B0-17790",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        160,
+        160
+      ],
+      "frame_box_px": [
+        356,
+        3398,
+        40,
+        40
+      ],
+      "display_css_px_at_375": [
+        20.0,
+        20.0
+      ],
+      "sha256": "ebd3036c48018cc3483d89612b18129de7917986176e9f467f3bbcf17a1540d8"
+    },
+    {
+      "id": "content-inactive",
+      "label": "有料（未选）",
+      "group": "navbar",
+      "file": "icons/navbar/content-inactive@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=I1451-310%3B0-17791",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        160,
+        160
+      ],
+      "frame_box_px": [
+        504,
+        3398,
+        40,
+        40
+      ],
+      "display_css_px_at_375": [
+        20.0,
+        20.0
+      ],
+      "sha256": "a9810a06dc18ed5bac899a22e5800ba7af13f291932010d040faaf7ad8c56b44"
+    },
+    {
+      "id": "profile-inactive",
+      "label": "我的（未选）",
+      "group": "navbar",
+      "file": "icons/navbar/profile-inactive@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=I1451-310%3B0-17792",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        160,
+        160
+      ],
+      "frame_box_px": [
+        654,
+        3398,
+        40,
+        40
+      ],
+      "display_css_px_at_375": [
+        20.0,
+        20.0
+      ],
+      "sha256": "583011b1d0d2f487bcdc256ebd4d81aefba19075fef89ef043e9a73f6de3c17d"
+    },
+    {
+      "id": "featured-flame",
+      "label": "信息精选火焰",
+      "group": "header",
+      "file": "icons/header/featured-flame@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1830",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        57,
+        79
+      ],
+      "frame_box_px": [
+        571,
+        317,
+        14.65,
+        19.55
+      ],
+      "display_css_px_at_375": [
+        7.33,
+        9.78
+      ],
+      "sha256": "79295739488500ee260da6d6ae77a769ff815923b3ad947be80f74664d214973"
+    },
+    {
+      "id": "notice-pointer",
+      "label": "信息精选箭头",
+      "group": "header",
+      "file": "icons/header/notice-pointer@4x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8502-1827",
+      "method": "figma_layer_png_4x",
+      "png_px": [
+        36,
+        64
+      ],
+      "frame_box_px": [
+        38,
+        377,
+        9.28,
+        18.57
+      ],
+      "display_css_px_at_375": [
+        4.64,
+        9.29
+      ],
+      "sha256": "f67d9f596d60998450455ab6415a01e2fc86eebdf2bc6113fceb95a2327d6066"
+    },
+    {
+      "id": "ranking-bestseller",
+      "label": "热销榜 TOP.1",
+      "group": "ranking",
+      "file": "icons/ranking/ranking-bestseller@1.5x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1451-260",
+      "method": "figma_layer_png_1_5x",
+      "png_px": [
+        204,
+        204
+      ],
+      "frame_box_px": [
+        48,
+        2541,
+        136,
+        136
+      ],
+      "display_css_px_at_375": [
+        68.0,
+        68.0
+      ],
+      "sha256": "9c34d2f4be65958ea9aa0b5797188b98cb7c10db28738af14ffd20b158daa3bc",
+      "note": "徽章已含榜单标题与 TOP.1 字样。"
+    },
+    {
+      "id": "ranking-returns",
+      "label": "收益榜 TOP.1",
+      "group": "ranking",
+      "file": "icons/ranking/ranking-returns@1.5x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1451-271",
+      "method": "figma_layer_png_1_5x",
+      "png_px": [
+        204,
+        204
+      ],
+      "frame_box_px": [
+        48,
+        2698,
+        136,
+        136
+      ],
+      "display_css_px_at_375": [
+        68.0,
+        68.0
+      ],
+      "sha256": "a90de88ab5267b81648c573a15cea9bc85d2f27efbdf65807e1416bf421bd3dc",
+      "note": "徽章已含榜单标题与 TOP.1 字样。"
+    },
+    {
+      "id": "ranking-investment",
+      "label": "定投榜 TOP.1",
+      "group": "ranking",
+      "file": "icons/ranking/ranking-investment@1.5x.png",
+      "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1451-285",
+      "method": "figma_layer_png_1_5x",
+      "png_px": [
+        204,
+        204
+      ],
+      "frame_box_px": [
+        48,
+        2855,
+        136,
+        136
+      ],
+      "display_css_px_at_375": [
+        68.0,
+        68.0
+      ],
+      "sha256": "2919f7cc784e91f2a45022a3dfa2e3f59c34fbea9fd8c53aaaf0bee12db67e44",
+      "note": "徽章已含榜单标题与 TOP.1 字样。"
+    }
+  ]
+}

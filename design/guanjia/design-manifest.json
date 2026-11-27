@@ -618,5 +618,9 @@
       ]
     }
   ],
-  "frame_count": 33
+  "frame_count": 33,
+  "ui_assets": {
+    "manifest": "assets/ui/asset-manifest.json",
+    "screen": "P0002-home"
+  }
 }
