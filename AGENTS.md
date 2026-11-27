@@ -9,7 +9,7 @@
 
 涉及首页或「管家」画板还原时，先读 [设计交接](design/guanjia/README.md)、[还原提示词](design/guanjia/AI-STUDIO-PROMPT.md) 和 [设计清单](design/guanjia/design-manifest.json)。设计清单给出本轮 33 张 Figma 画板及状态；下文 21 页、1080×2400 和实测交互约束用于 v7.0.2 的采集资料。
 
-- P0002 首页当前视觉基准为 [Figma 首页原稿](design/guanjia/references/screens/home-and-follow/P0002-home.png)，尺寸 750×3540。界面文字、导航、入口、版式和滚动顺序按新稿。经理形象及首页图标一律使用 [固定素材清单](design/guanjia/assets/ui/asset-manifest.json) 的 PNG，保留显示尺寸及状态。
+- P0002 首页当前视觉基准为 [Figma 首页原稿](design/guanjia/references/screens/home-and-follow/P0002-home.png)，尺寸 750×3540。界面文字、导航、入口、版式和滚动顺序按新稿。经理形象及首页图标一律使用 [固定素材清单](design/guanjia/assets/ui/asset-manifest.json) 的 PNG，保留显示尺寸及状态。首页默认快捷入口以清单的 `home_shortcuts_current.default` 为准，依次为全部基金、我的自选、会员中心、目标投、养老专区。
 - 其他有 Figma 设计依据的管家页面与状态按设计清单复现。实机截图、XML 与已验证交互用来查采集时的行为及补充未覆盖的页面。实测坐标属于原实机截图。只有触发控件在新稿中仍存在且含义一致时，才沿用对应行为。
 - 优先验收新版 P0002 的首屏、滚动和页底；其余模块按提示词分批实现。设计图中示出的界面状态可以作为演示范围，未实测的跳转与业务流程应标明。
 

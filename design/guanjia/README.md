@@ -26,7 +26,7 @@ P0002 是本轮明确匹配的采集页，当前视觉基准为最新版 Figma �
 
 ## 首页固定素材
 
-用 [固定素材与引用规则](./assets/ui/README.md) 和 [素材清单](./assets/ui/asset-manifest.json) 定位经理形象、快捷入口、消息、搜索、导航和榜单徽章。已有对应 PNG 的元素直接引用文件。
+用 [固定素材与引用规则](./assets/ui/README.md) 和 [素材清单](./assets/ui/asset-manifest.json) 定位经理形象、快捷入口、消息、搜索、导航和榜单徽章。首页默认五项快捷入口以清单的 `home_shortcuts_current` 为准。已有对应 PNG 的元素直接引用文件。
 
 ## 读图约定
 

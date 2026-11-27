@@ -433,6 +433,182 @@
       ],
       "sha256": "2919f7cc784e91f2a45022a3dfa2e3f59c34fbea9fd8c53aaaf0bee12db67e44",
       "note": "徽章已含榜单标题与 TOP.1 字样。"
+    },
+    {
+      "id": "membership",
+      "label": "会员中心",
+      "group": "shortcut",
+      "file": "icons/shortcuts/membership@4x.png",
+      "source_reference": "references/shortcuts-default.png",
+      "source_capture_box_px": [
+        600,
+        341,
+        120,
+        120
+      ],
+      "method": "imagegen_bitmap_restoration",
+      "png_px": [
+        280,
+        280
+      ],
+      "display_css_px_at_375": [
+        35,
+        35
+      ],
+      "sha256": "9b868ef049bb820f432dfb78f036be3f09a46c960007f5165bfc065996302b2b"
+    },
+    {
+      "id": "target-invest",
+      "label": "目标投",
+      "group": "shortcut",
+      "file": "icons/shortcuts/target-invest@4x.png",
+      "source_reference": "references/shortcuts-default.png",
+      "source_capture_box_px": [
+        858,
+        341,
+        120,
+        120
+      ],
+      "method": "imagegen_bitmap_restoration",
+      "png_px": [
+        280,
+        280
+      ],
+      "display_css_px_at_375": [
+        35,
+        35
+      ],
+      "sha256": "f839bf15ebc94920c745d9d1f2382c10c3f46a60884de6322d2e23e7fd0292ea"
+    },
+    {
+      "id": "retirement",
+      "label": "养老专区",
+      "group": "shortcut",
+      "file": "icons/shortcuts/retirement@4x.png",
+      "source_reference": "references/shortcuts-default.png",
+      "source_capture_box_px": [
+        1115,
+        341,
+        120,
+        120
+      ],
+      "method": "imagegen_bitmap_restoration",
+      "png_px": [
+        280,
+        280
+      ],
+      "display_css_px_at_375": [
+        35,
+        35
+      ],
+      "sha256": "e7d04ea79d1a8376373467f8ba0e62268e59f12acd498a1eb546b39d84535822"
+    },
+    {
+      "id": "fund-advisory",
+      "label": "基金投顾",
+      "group": "shortcut",
+      "file": "icons/shortcuts/fund-advisory@4x.png",
+      "source_reference": "references/shortcuts-carousel-end.png",
+      "source_capture_box_px": [
+        343,
+        341,
+        120,
+        120
+      ],
+      "method": "imagegen_bitmap_restoration",
+      "png_px": [
+        280,
+        280
+      ],
+      "display_css_px_at_375": [
+        35,
+        35
+      ],
+      "sha256": "bc9390fc46425f7081fcf587303f27efc8d98c99eaab7c77cd449b0c931991db"
+    },
+    {
+      "id": "hot-badge",
+      "label": "Hot 角标",
+      "group": "shortcut-badge",
+      "file": "icons/shortcuts/hot-badge@4x.png",
+      "source_reference": "references/shortcuts-default.png",
+      "source_capture_box_px": [
+        660,
+        311,
+        90,
+        45
+      ],
+      "method": "approved_bitmap_extract",
+      "png_px": [
+        210,
+        105
+      ],
+      "display_css_px_at_375": [
+        26.25,
+        13.125
+      ],
+      "sha256": "eab3bd86cf925a95e3b461c5f25e5071337b9ad116f9ade4fa4921fa12481cd2"
     }
-  ]
+  ],
+  "home_shortcuts_current": {
+    "source": "用户提供的新版首页截图。此字段覆盖旧 Figma 首页的快捷入口集合与顺序。",
+    "source_capture_size_px": [
+      1320,
+      2868
+    ],
+    "reference_crop_origin_px": [
+      36,
+      300
+    ],
+    "shortcut_png_display_css_px_at_375": [
+      35,
+      35
+    ],
+    "default": {
+      "reference": "references/shortcuts-default.png",
+      "entries": [
+        {
+          "asset_id": "all-funds"
+        },
+        {
+          "asset_id": "watchlist"
+        },
+        {
+          "asset_id": "membership",
+          "badge_id": "hot-badge"
+        },
+        {
+          "asset_id": "target-invest",
+          "badge_id": "hot-badge"
+        },
+        {
+          "asset_id": "retirement"
+        }
+      ]
+    },
+    "visible_carousel_end": {
+      "reference": "references/shortcuts-carousel-end.png",
+      "observed_indicator_position": 3,
+      "observed_indicator_total": 3,
+      "entries": [
+        {
+          "asset_id": "family-account"
+        },
+        {
+          "asset_id": "fund-advisory"
+        }
+      ]
+    },
+    "hot_badge": {
+      "asset_id": "hot-badge",
+      "display_offset_from_icon_css_px_at_375": [
+        17.5,
+        -8.75
+      ]
+    },
+    "earlier_design_only": [
+      "cash-management",
+      "rewards"
+    ]
+  }
 }
