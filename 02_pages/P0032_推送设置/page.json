@@ -1,0 +1,33 @@
+{
+  "id": "P0032",
+  "name": "推送设置",
+  "module": "我的",
+  "level": 3,
+  "type": "原生 Activity",
+  "entry": "设置-消息推送/个性化相关设置",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P2",
+  "description": "消息推送/个性化相关设置页：应用外推送状态（推送未开启）、营销服务弹窗开关及说明、个性化推荐相关设置。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0032_推送设置/screenshots/P0032_推送设置_default_001.png"
+    ],
+    "states": [],
+    "annotations": [],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0032_推送设置/screenshots/P0032_推送设置_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C010"
+  ],
+  "source": "P0023",
+  "targets": [],
+  "interactions": []
+}

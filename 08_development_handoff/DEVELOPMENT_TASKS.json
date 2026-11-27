@@ -1,0 +1,358 @@
+{
+  "project": "ChinaAMC_App_Reconstruction",
+  "generated_at": "2026-11-27",
+  "note": "任务可并行执行；依赖任务 ID 指向本文件内其他 task_id。所有 page_ids 均为 MASTER_INDEX.json 中 pages 的真实 ID。金融业务仅实现模拟交互与登录拦截提示。",
+  "tasks": [
+    {
+      "task_id": "T01",
+      "name": "基础框架与全局基础设施",
+      "名称": "基础框架与全局基础设施",
+      "开发范围": "页面注册表、路由、底部导航、WebView 容器、登录拦截中间件、mock 数据层、组件壳 C001-C010、1080x2400 截图比对基线",
+      "scope": "页面注册表、路由、底部导航、WebView 容器、登录拦截中间件、mock 数据层、组件壳 C001-C010、1080x2400 截图比对基线",
+      "page_ids": [],
+      "参考文件路径": [
+        "01_architecture/routes.json",
+        "01_architecture/page_graph.json",
+        "01_architecture/PAGE_RELATIONSHIPS.md",
+        "05_design_system/components.json",
+        "ENVIRONMENT.md",
+        "08_development_handoff/DEVELOPMENT_GUIDE.md"
+      ],
+      "依赖任务": [],
+      "dependencies": [],
+      "输入条件": "21 个页面的 routes.json 与组件表已存在；截图基准可用",
+      "预期输出": "可运行空壳工程，路由表覆盖 21 个 page_id，登录拦截器统一指向 P0004",
+      "验收标准": "21 个 page_id 均注册；5 tab 底部导航可切换；WebView 容器可加载 H5；登录拦截命中 blocked_flows.md 中全部登录类入口",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T02",
+      "name": "P0001 启动与隐私协议",
+      "名称": "P0001 启动与隐私协议",
+      "开发范围": "Splash 启动页、首次启动隐私协议弹窗、系统弹窗异常仅作记录不还原",
+      "scope": "Splash 启动页、首次启动隐私协议弹窗、系统弹窗异常仅作记录不还原",
+      "page_ids": ["P0001"],
+      "参考文件路径": [
+        "02_pages/P0001_启动与协议/PAGE_SPEC.md",
+        "02_pages/P0001_启动与协议/page.json",
+        "MASTER_INDEX.json",
+        "03_interactions/interactions.json",
+        "04_flows/F001_first_launch_agreement.md"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 路由与组件壳就绪；P0001 两张截图可用",
+      "预期输出": "P0001 页面，P0001-I001 / P0001-I004 可用，I002 / I003 标注未验证",
+      "验收标准": "点击同意或跳过进入 P0002；未验证分支有显式标注；不实现 P0018",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T03",
+      "name": "P0002 首页",
+      "名称": "P0002 首页",
+      "开发范围": "顶部搜索框、Banner 轮播、5 个快捷入口、内容卡片长页、吸顶、财富广场悬浮入口",
+      "scope": "顶部搜索框、Banner 轮播、5 个快捷入口、内容卡片长页、吸顶、财富广场悬浮入口",
+      "page_ids": ["P0002"],
+      "参考文件路径": [
+        "02_pages/P0002_首页/PAGE_SPEC.md",
+        "02_pages/P0002_首页/page.json",
+        "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_scroll_001.png",
+        "03_interactions/interactions.json",
+        "05_design_system/components.json"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 组件 C001-C005/C010 就绪；6 张截图可用",
+      "预期输出": "P0002 页面，13 条交互按验证状态实现",
+      "验收标准": "default / banner_variant / scroll_1~3 五个状态视觉对齐；P0002-I003/I011 登录拦截命中 P0004；P0002-I007 跳 P0037",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T04",
+      "name": "P0003 指数行情",
+      "名称": "P0003 指数行情",
+      "开发范围": "主要指数横滑卡片、指数热力图、分类 Tab、指数列表、涨跌幅排序",
+      "scope": "主要指数横滑卡片、指数热力图、分类 Tab、指数列表、涨跌幅排序",
+      "page_ids": ["P0003"],
+      "参考文件路径": [
+        "02_pages/P0003_指数行情/PAGE_SPEC.md",
+        "02_pages/P0003_指数行情/page.json",
+        "03_interactions/interactions.json",
+        "04_flows/F007_index_quote_to_detail.md",
+        "05_design_system/components.json"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 组件 C002/C006/C007/C010 就绪；热力图与 Tab 截图可用",
+      "预期输出": "P0003 页面，分类 Tab 与两个指数详情入口可用",
+      "验收标准": "涨红跌绿；P0003-I003/I005 进入 P0022；P0003-I006 标注未完全验证",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T05",
+      "name": "P0004 登录",
+      "名称": "P0004 登录",
+      "开发范围": "账户类型选择、账号输入、协议勾选、忘记密码协议弹窗、第三方登录入口占位",
+      "scope": "账户类型选择、账号输入、协议勾选、忘记密码协议弹窗、第三方登录入口占位",
+      "page_ids": ["P0004"],
+      "参考文件路径": [
+        "02_pages/P0004_登录/PAGE_SPEC.md",
+        "02_pages/P0004_登录/page.json",
+        "02_pages/P0004_登录/screenshots/P0004_登录_default_001.xml",
+        "03_interactions/interactions.json",
+        "04_flows/F003_login_register_forgot.md"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "UI 层级 XML 可用；无截图基准（FLAG_SECURE）",
+      "预期输出": "P0004 页面 UI 与协议弹窗分支；P0004-I004/I009 可用",
+      "验收标准": "只做结构还原；禁止实现登录成功态；P0004-I003/I006/I007 标注未验证；视觉验收标注无基准",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T06",
+      "name": "P0005 我的",
+      "名称": "P0005 我的",
+      "开发范围": "未登录态登录入口、会员横幅、脱敏资产、买基金/交易记录、常用功能展开、设置入口",
+      "scope": "未登录态登录入口、会员横幅、脱敏资产、买基金/交易记录、常用功能展开、设置入口",
+      "page_ids": ["P0005"],
+      "参考文件路径": [
+        "02_pages/P0005_我的/PAGE_SPEC.md",
+        "02_pages/P0005_我的/page.json",
+        "02_pages/P0005_我的/screenshots/P0005_我的_default_001.png",
+        "03_interactions/interactions.json"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 组件 C001/C008/C010 就绪；默认态与展开态截图可用",
+      "预期输出": "P0005 页面，8 条交互实现",
+      "验收标准": "资产显示为脱敏 ******；P0005-I004/I005/I008 登录拦截命中 P0004；P0005-I002 进入 P0023",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T07",
+      "name": "P0007 全部基金 H5",
+      "名称": "P0007 全部基金 H5",
+      "开发范围": "WebView 容器、分类 Tab、标签芯片、筛选、排序表头、基金列表、时间区间切换",
+      "scope": "WebView 容器、分类 Tab、标签芯片、筛选、排序表头、基金列表、时间区间切换",
+      "page_ids": ["P0007"],
+      "参考文件路径": [
+        "02_pages/P0007_全部基金/PAGE_SPEC.md",
+        "02_pages/P0007_全部基金/page.json",
+        "03_interactions/interactions.json",
+        "05_design_system/components.json"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 WebView 容器就绪；P0007 截图可用",
+      "预期输出": "P0007 页面，P0007-I001/I004 可用",
+      "验收标准": "P0007-I004 触发登录拦截；P0007-I002/I003/I005 标注未验证；不实现 P0008 内容",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T08",
+      "name": "P0011 会员中心",
+      "名称": "P0011 会员中心",
+      "开发范围": "RN 风格会员中心：立即登录、会员等级、每月权益卡片、登录验证提示",
+      "scope": "RN 风格会员中心：立即登录、会员等级、每月权益卡片、登录验证提示",
+      "page_ids": ["P0011"],
+      "参考文件路径": [
+        "02_pages/P0011_会员中心/PAGE_SPEC.md",
+        "02_pages/P0011_会员中心/page.json",
+        "03_interactions/interactions.json"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 组件 C004/C005/C010 就绪；P0011 截图可用",
+      "预期输出": "P0011 页面，P0011-I001 可用",
+      "验收标准": "立即登录跳 P0004；P0011-I002 权益详情标注未验证",
+      "priority": "P1"
+    },
+    {
+      "task_id": "T09",
+      "name": "P0012 目标投与 P0013 养老专区",
+      "名称": "P0012 目标投与 P0013 养老专区",
+      "开发范围": "两个 H5 活动页：目标投止盈收益率与目标指数、养老专区个税计算器与流程指南",
+      "scope": "两个 H5 活动页：目标投止盈收益率与目标指数、养老专区个税计算器与流程指南",
+      "page_ids": ["P0012", "P0013"],
+      "参考文件路径": [
+        "02_pages/P0012_目标投/PAGE_SPEC.md",
+        "02_pages/P0013_养老专区/PAGE_SPEC.md",
+        "03_interactions/interactions.json",
+        "04_flows/FLOW_INDEX.md"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 WebView 容器就绪；两个活动页截图可用",
+      "预期输出": "P0012 / P0013 页面，入口与展示完整",
+      "验收标准": "P0012-I001 / P0013-I001~I003 全部标注未验证；不实现真实投资计划或计算结果",
+      "priority": "P1"
+    },
+    {
+      "task_id": "T10",
+      "name": "P0020 搜索与 P0021 搜索结果",
+      "名称": "P0020 搜索与 P0021 搜索结果",
+      "开发范围": "搜索输入与键盘态、热词、热门搜索、搜索结果相关基金/指数/资讯",
+      "scope": "搜索输入与键盘态、热词、热门搜索、搜索结果相关基金/指数/资讯",
+      "page_ids": ["P0020", "P0021"],
+      "参考文件路径": [
+        "02_pages/P0020_搜索/PAGE_SPEC.md",
+        "02_pages/P0021_搜索结果/PAGE_SPEC.md",
+        "03_interactions/interactions.json",
+        "04_flows/F004_search_to_index_detail.md"
+      ],
+      "依赖任务": ["T01"],
+      "dependencies": ["T01"],
+      "输入条件": "T01 组件 C003/C006/C007/C010 就绪；搜索与结果截图可用",
+      "预期输出": "P0020 / P0021 页面，F004 主链路可用",
+      "验收标准": "P0020-I001/I002/I003 与 P0021-I002/I004 可用；P0021-I002 登录拦截；P0021-I005 资讯未采集需标注",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T11",
+      "name": "P0022 指数详情 H5",
+      "名称": "P0022 指数详情 H5",
+      "开发范围": "WebView 指数详情：现价涨跌、全景/成分股 Tab、估值分析图表、添加自选、相关基金",
+      "scope": "WebView 指数详情：现价涨跌、全景/成分股 Tab、估值分析图表、添加自选、相关基金",
+      "page_ids": ["P0022"],
+      "参考文件路径": [
+        "02_pages/P0022_指数详情/PAGE_SPEC.md",
+        "02_pages/P0022_指数详情/page.json",
+        "03_interactions/interactions.json",
+        "04_flows/F007_index_quote_to_detail.md"
+      ],
+      "依赖任务": ["T01", "T04", "T10"],
+      "dependencies": ["T01", "T04", "T10"],
+      "输入条件": "T01 WebView 容器就绪；P0003/P0021 入口可用",
+      "预期输出": "P0022 页面，两个入口链路可用",
+      "验收标准": "P0022-I001 H5 Tab 点击未生效需标注；P0022-I003 登录拦截标注未验证；涨红跌绿",
+      "priority": "P1"
+    },
+    {
+      "task_id": "T12",
+      "name": "P0023 设置与 P0024 关于、P0031 长辈模式、P0032 推送设置",
+      "名称": "P0023 设置与 P0024 关于、P0031 长辈模式、P0032 推送设置",
+      "开发范围": "设置页四个入口与三个下级页面：关于页、长辈模式开关页、推送设置页",
+      "scope": "设置页四个入口与三个下级页面：关于页、长辈模式开关页、推送设置页",
+      "page_ids": ["P0023", "P0024", "P0031", "P0032"],
+      "参考文件路径": [
+        "02_pages/P0023_设置/PAGE_SPEC.md",
+        "02_pages/P0024_关于/PAGE_SPEC.md",
+        "02_pages/P0031_长辈模式/PAGE_SPEC.md",
+        "02_pages/P0032_推送设置/PAGE_SPEC.md",
+        "03_interactions/interactions.json",
+        "04_flows/F005_settings_to_agreement_h5.md"
+      ],
+      "依赖任务": ["T01", "T06"],
+      "dependencies": ["T01", "T06"],
+      "输入条件": "T06 我的页设置齿轮可用；四个页面截图可用",
+      "预期输出": "四个页面可运行，P0023-I005/I006 可用",
+      "验收标准": "P0023-I003 与 P0023-I007 目标 ID 冲突按约定以 P0029 为准并标注未验证；P0031-I001 未执行需标注",
+      "priority": "P1"
+    },
+    {
+      "task_id": "T13",
+      "name": "P0029 协议列表与 P0030 协议详情 H5",
+      "名称": "P0029 协议列表与 P0030 协议详情 H5",
+      "开发范围": "协议列表面与协议正文 WebView，含七个协议入口",
+      "scope": "协议列表面与协议正文 WebView，含七个协议入口",
+      "page_ids": ["P0029", "P0030"],
+      "参考文件路径": [
+        "02_pages/P0029_协议列表/PAGE_SPEC.md",
+        "02_pages/P0030_协议详情H5/PAGE_SPEC.md",
+        "03_interactions/interactions.json",
+        "04_flows/F005_settings_to_agreement_h5.md"
+      ],
+      "依赖任务": ["T01", "T12"],
+      "dependencies": ["T01", "T12"],
+      "输入条件": "T12 设置页协议入口可用；协议列表与详情截图可用",
+      "预期输出": "P0029 / P0030 页面，F005 链路可用",
+      "验收标准": "P0029-I001 已验证可用；P0029-I002~I005 标注未逐项验证；不实现 P0018",
+      "priority": "P2"
+    },
+    {
+      "task_id": "T14",
+      "name": "P0033 注册与 P0035 找回密码",
+      "名称": "P0033 注册与 P0035 找回密码",
+      "开发范围": "两个 FLAG_SECURE 页面的 UI 层级结构：手机号注册表单与身份核实表单",
+      "scope": "两个 FLAG_SECURE 页面的 UI 层级结构：手机号注册表单与身份核实表单",
+      "page_ids": ["P0033", "P0035"],
+      "参考文件路径": [
+        "02_pages/P0033_注册/PAGE_SPEC.md",
+        "02_pages/P0035_找回密码/PAGE_SPEC.md",
+        "02_pages/P0033_注册/screenshots/P0033_注册_UI结构_full.xml",
+        "02_pages/P0035_找回密码/screenshots/P0035_找回密码_UI结构_full.xml",
+        "03_interactions/interactions.json",
+        "04_flows/F003_login_register_forgot.md"
+      ],
+      "依赖任务": ["T01", "T05"],
+      "dependencies": ["T01", "T05"],
+      "输入条件": "T05 登录页去注册/协议弹窗分支可用；UI 层级 XML 可用",
+      "预期输出": "P0033 / P0035 页面 UI；P0033-I003/I005 可用",
+      "验收标准": "禁止真实手机号/验证码/身份提交；P0033-I002/I004 与 P0035-I001~I004 标注安全边界阻塞；视觉验收标注无基准",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T15",
+      "name": "P0037 稳健理财 H5",
+      "名称": "P0037 稳健理财 H5",
+      "开发范围": "首页 Banner 落地活动页：Banner 图、基金产品卡片、业绩比较基准与风险提示长文",
+      "scope": "首页 Banner 落地活动页：Banner 图、基金产品卡片、业绩比较基准与风险提示长文",
+      "page_ids": ["P0037"],
+      "参考文件路径": [
+        "02_pages/P0037_稳健理财H5/PAGE_SPEC.md",
+        "02_pages/P0037_稳健理财H5/page.json",
+        "03_interactions/interactions.json",
+        "04_flows/F006_home_banner_activity_h5.md"
+      ],
+      "依赖任务": ["T01", "T03"],
+      "dependencies": ["T01", "T03"],
+      "输入条件": "T03 首页 Banner 入口可用；P0037 两张截图可用",
+      "预期输出": "P0037 页面，P0037-I002 滚动可用",
+      "验收标准": "P0037-I001 产品卡片标注未验证并走登录拦截；不实现 P0008 内容",
+      "priority": "P1"
+    },
+    {
+      "task_id": "T16",
+      "name": "核心业务流程编排",
+      "名称": "核心业务流程编排",
+      "开发范围": "串联 F001-F007 七个流程，统一登录拦截中间件与返回栈策略",
+      "scope": "串联 F001-F007 七个流程，统一登录拦截中间件与返回栈策略",
+      "page_ids": ["P0001", "P0002", "P0003", "P0004", "P0005", "P0007", "P0020", "P0021", "P0022", "P0023", "P0029", "P0030", "P0033", "P0035", "P0037"],
+      "参考文件路径": [
+        "04_flows/business_flows.json",
+        "04_flows/FLOW_INDEX.md",
+        "04_flows/blocked_flows.md",
+        "01_architecture/PAGE_RELATIONSHIPS.md",
+        "03_interactions/interactions.json"
+      ],
+      "依赖任务": ["T02", "T03", "T04", "T05", "T06", "T07", "T10", "T11", "T12", "T13", "T14", "T15"],
+      "dependencies": ["T02", "T03", "T04", "T05", "T06", "T07", "T10", "T11", "T12", "T13", "T14", "T15"],
+      "输入条件": "阶段 2-4 页面全部就绪；流程文档已评审",
+      "预期输出": "F001-F007 主链路可走通；全部登录拦截点命中 P0004",
+      "验收标准": "按 FLOW_INDEX.md 逐条走查通过；金融业务只有模拟交互与拦截提示；返回栈符合原生/H5 约定",
+      "priority": "P0"
+    },
+    {
+      "task_id": "T17",
+      "name": "全量交互视觉还原与验收",
+      "名称": "全量交互视觉还原与验收",
+      "开发范围": "42 条已验证交互全覆盖、48 条未验证交互默认实现并标注、21 页视觉逐页比对、五维验收",
+      "scope": "42 条已验证交互全覆盖、48 条未验证交互默认实现并标注、21 页视觉逐页比对、五维验收",
+      "page_ids": ["P0001", "P0002", "P0003", "P0004", "P0005", "P0007", "P0011", "P0012", "P0013", "P0020", "P0021", "P0022", "P0023", "P0024", "P0029", "P0030", "P0031", "P0032", "P0033", "P0035", "P0037"],
+      "参考文件路径": [
+        "08_development_handoff/ACCEPTANCE_CRITERIA.md",
+        "04_flows/blocked_flows.md",
+        "05_design_system/components.json",
+        "ENVIRONMENT.md"
+      ],
+      "依赖任务": ["T08", "T09", "T16"],
+      "dependencies": ["T08", "T09", "T16"],
+      "输入条件": "全部页面与流程就绪；截图基准可用",
+      "预期输出": "验收报告、未验证清单、阻塞清单",
+      "验收标准": "视觉/交互/路由/状态/安全边界五维全部通过；pending 页面未被误实现；金融业务未越界",
+      "priority": "P0"
+    }
+  ]
+}

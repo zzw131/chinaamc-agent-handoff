@@ -1,0 +1,46 @@
+{
+  "id": "P0021",
+  "name": "搜索结果",
+  "module": "搜索",
+  "level": 3,
+  "type": "原生 Activity",
+  "entry": "搜索页-搜索按钮/热词",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "搜索结果页：相关基金（含加自选/0申购费买入）、相关指数、相关内容（市场热点资讯），可滚动。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0021_搜索结果/screenshots/P0021_搜索结果_default_001.png",
+      "02_pages/P0021_搜索结果/screenshots/P0021_搜索结果_scroll_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0021_搜索结果/annotations/P0021_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": []
+  },
+  "states": [
+    "default",
+    "scroll"
+  ],
+  "components": [
+    "C006",
+    "C007",
+    "C010"
+  ],
+  "source": "P0020",
+  "targets": [
+    "P0004",
+    "P0022"
+  ],
+  "interactions": [
+    "P0021-I001",
+    "P0021-I002",
+    "P0021-I003",
+    "P0021-I004",
+    "P0021-I005"
+  ]
+}

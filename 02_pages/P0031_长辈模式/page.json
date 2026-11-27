@@ -1,0 +1,37 @@
+{
+  "id": "P0031",
+  "name": "长辈模式",
+  "module": "我的",
+  "level": 3,
+  "type": "原生 Activity",
+  "entry": "设置-长辈模式",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P2",
+  "description": "长辈模式开启页：开关说明「开启后部分页面文字和按钮会更大」、开启按钮。未实际开启以避免改变全局字号影响后续采集（状态未验证）。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0031_长辈模式/screenshots/P0031_长辈模式_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0031_长辈模式/annotations/P0031_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0031_长辈模式/screenshots/P0031_长辈模式_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C009"
+  ],
+  "source": "P0023",
+  "targets": [],
+  "interactions": [
+    "P0031-I001"
+  ]
+}

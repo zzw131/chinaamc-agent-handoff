@@ -1,0 +1,44 @@
+{
+  "id": "P0001",
+  "name": "启动与隐私协议",
+  "module": "公共",
+  "level": 0,
+  "type": "弹窗/启动页",
+  "entry": "App 冷启动",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "Splash 启动页 + 首次启动用户服务协议与隐私权政策弹窗；含系统 System UI 弹窗异常状态。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0001_启动与协议/screenshots/P0001_启动_系统弹窗_001.png",
+      "02_pages/P0001_启动与协议/screenshots/P0001_隐私协议_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0001_启动与协议/annotations/P0001_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0001_启动与协议/screenshots/P0001_隐私协议_default_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "system_dialog"
+  ],
+  "components": [
+    "C001"
+  ],
+  "source": null,
+  "targets": [
+    "P0002"
+  ],
+  "interactions": [
+    "P0001-I001",
+    "P0001-I002",
+    "P0001-I003",
+    "P0001-I004"
+  ]
+}

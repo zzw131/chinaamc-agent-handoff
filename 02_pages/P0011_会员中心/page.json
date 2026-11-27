@@ -1,0 +1,40 @@
+{
+  "id": "P0011",
+  "name": "会员中心",
+  "module": "会员",
+  "level": 2,
+  "type": "原生 RN Activity",
+  "entry": "首页快捷入口-会员中心 / 我的-会员中心",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P1",
+  "description": "华夏基金会员中心：立即登录、会员等级分（黄金10万/铂金50万/钻石100万）、每月权益（元气补给/乐活轻享等），权益项含京东E卡/星巴克代金券/淘宝红包等，底部登录验证提示。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0011_会员中心/screenshots/P0011_会员中心_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0011_会员中心/annotations/P0011_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": []
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C004",
+    "C005",
+    "C010"
+  ],
+  "source": "P0002/P0005",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0011-I001",
+    "P0011-I002"
+  ]
+}

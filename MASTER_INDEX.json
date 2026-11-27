@@ -1,0 +1,763 @@
+{
+  "project": "ChinaAMC_App_Reconstruction",
+  "app": {
+    "name": "华夏基金管家",
+    "package": "com.chinaamc.MainActivityAMC",
+    "version": "7.0.2"
+  },
+  "generated_at": "2026-11-27",
+  "page_count": 21,
+  "pages": [
+    {
+      "id": "P0001",
+      "name": "启动与隐私协议",
+      "module": "公共",
+      "level": 0,
+      "type": "弹窗/启动页",
+      "entry": "App 冷启动",
+      "login": false,
+      "status": "captured",
+      "desc": "Splash 启动页 + 首次启动用户服务协议与隐私权政策弹窗；含系统 System UI 弹窗异常状态。",
+      "spec": "02_pages/P0001_启动与协议/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0001_启动与协议/screenshots/P0001_启动_系统弹窗_001.png",
+        "02_pages/P0001_启动与协议/screenshots/P0001_隐私协议_default_001.png"
+      ],
+      "states": [
+        "default",
+        "system_dialog"
+      ],
+      "priority": "P0",
+      "components": [
+        "C001"
+      ],
+      "source": null,
+      "targets": [
+        "P0002"
+      ]
+    },
+    {
+      "id": "P0002",
+      "name": "首页",
+      "module": "首页",
+      "level": 1,
+      "type": "原生 Fragment",
+      "entry": "底部导航-首页 / 协议同意后默认进入",
+      "login": false,
+      "status": "captured",
+      "desc": "首页含顶部搜索框、轮播 Banner、5 个快捷入口、核心配置/主题配置/追求稳健/热点行业等内容卡片，长页面可滚动，右侧悬浮财富广场。",
+      "spec": "02_pages/P0002_首页/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_banner状态2_001.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_default_002.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_scroll_001.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_scroll_002.png",
+        "02_pages/P0002_首页/screenshots/P0002_首页_scroll_003.png"
+      ],
+      "states": [
+        "default",
+        "banner_variant",
+        "scroll_1",
+        "scroll_2",
+        "scroll_3"
+      ],
+      "priority": "P0",
+      "components": [
+        "C001",
+        "C002",
+        "C003",
+        "C004",
+        "C005",
+        "C010"
+      ],
+      "source": "P0001",
+      "targets": [
+        "P0003",
+        "P0004",
+        "P0007",
+        "P0011",
+        "P0012",
+        "P0013",
+        "P0020",
+        "P0022",
+        "P0037"
+      ]
+    },
+    {
+      "id": "P0003",
+      "name": "指数行情",
+      "module": "行情",
+      "level": 1,
+      "type": "原生 Fragment",
+      "entry": "底部导航-指数行情",
+      "login": false,
+      "status": "captured",
+      "desc": "指数行情页：顶部搜索框、主要指数横滑卡片（上证/深证/创业板/恒生等）、指数热力图、分类 Tab（全部83/宽基18/香港市场12/新能源8/科技15 等）、指数列表（涨跌幅/PE/PB/估值）。",
+      "spec": "02_pages/P0003_指数行情/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0003_指数行情/screenshots/P0003_指数行情_default_001.png",
+        "02_pages/P0003_指数行情/screenshots/P0003_指数行情_tab宽基_001.png",
+        "02_pages/P0003_指数行情/screenshots/P0003_指数行情_scroll_001.png"
+      ],
+      "states": [
+        "default",
+        "loading",
+        "tab宽基",
+        "scroll"
+      ],
+      "priority": "P0",
+      "components": [
+        "C002",
+        "C006",
+        "C007",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0020",
+        "P0022"
+      ]
+    },
+    {
+      "id": "P0004",
+      "name": "登录",
+      "module": "账户",
+      "level": 1,
+      "type": "原生 Activity (FLAG_SECURE)",
+      "entry": "底部导航-资产 / 我的自选 / 加自选 / 基金详情购买",
+      "login": true,
+      "status": "captured_partial",
+      "desc": "账号登录页：账户类型选择（手机号/身份证号）、账号输入、忘记密码、下一步、注册入口、协议勾选、微信登录、手机号快捷登录。窗口带 FLAG_SECURE，截图为黑屏，以 UI 层级为准。",
+      "spec": "02_pages/P0004_登录/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0004_登录/screenshots/P0004_登录_default_001.xml"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P0",
+      "components": [
+        "C008",
+        "C009"
+      ],
+      "source": "P0002/P0003/P0005",
+      "targets": [
+        "P0033",
+        "P0035"
+      ]
+    },
+    {
+      "id": "P0005",
+      "name": "我的",
+      "module": "我的",
+      "level": 1,
+      "type": "原生 Fragment",
+      "entry": "底部导航-我的",
+      "login": false,
+      "status": "captured",
+      "desc": "个人中心未登录态：登录/注册入口、会员横幅、总资产（脱敏 ******）、买基金、交易记录/银行卡/定投管理、我的积分/理财周报、常用功能（月度账单/资产归集/会员中心/高端理财认证/定期转换）、意见反馈/常见问题/投顾解约/相关协议。",
+      "spec": "02_pages/P0005_我的/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0005_我的/screenshots/P0005_我的_default_001.png",
+        "02_pages/P0005_我的/states/P0005_我的_expanded_001.png"
+      ],
+      "states": [
+        "default",
+        "expanded"
+      ],
+      "priority": "P0",
+      "components": [
+        "C001",
+        "C008",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0004",
+        "P0011",
+        "P0023",
+        "P0029"
+      ]
+    },
+    {
+      "id": "P0007",
+      "name": "全部基金",
+      "module": "基金",
+      "level": 2,
+      "type": "WebView (H5)",
+      "entry": "首页快捷入口-全部基金",
+      "login": false,
+      "status": "captured",
+      "desc": "基金列表 H5：顶部分类 Tab（全部基金/股票型/混合型/指数型/债券型/货币型等）、标签芯片（QDII全球基金/历史绩优纯债等）、筛选入口、排序表头（基金名称/最新净值/涨跌幅/夏普比率/最大回撤）、基金列表、时间区间切换（近6月/今年以来/近1年/近3年/近5年）。",
+      "spec": "02_pages/P0007_全部基金/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0007_全部基金/screenshots/P0007_全部基金_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P0",
+      "components": [
+        "C003",
+        "C006",
+        "C007",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0011",
+      "name": "会员中心",
+      "module": "会员",
+      "level": 2,
+      "type": "原生 RN Activity",
+      "entry": "首页快捷入口-会员中心 / 我的-会员中心",
+      "login": false,
+      "status": "captured",
+      "desc": "华夏基金会员中心：立即登录、会员等级分（黄金10万/铂金50万/钻石100万）、每月权益（元气补给/乐活轻享等），权益项含京东E卡/星巴克代金券/淘宝红包等，底部登录验证提示。",
+      "spec": "02_pages/P0011_会员中心/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0011_会员中心/screenshots/P0011_会员中心_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P1",
+      "components": [
+        "C004",
+        "C005",
+        "C010"
+      ],
+      "source": "P0002/P0005",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0012",
+      "name": "目标投",
+      "module": "活动",
+      "level": 2,
+      "type": "WebView (H5活动)",
+      "entry": "首页快捷入口-目标投",
+      "login": false,
+      "status": "captured",
+      "desc": "目标投第19期 H5 活动页：目标止盈收益率 5%至9%、本期推荐指数中证2000、点击开启目标投、起投时间、指数亮点等。",
+      "spec": "02_pages/P0012_目标投/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0012_目标投/screenshots/P0012_目标投_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P1",
+      "components": [
+        "C005",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0013",
+      "name": "养老专区",
+      "module": "养老",
+      "level": 2,
+      "type": "WebView (H5)",
+      "entry": "首页快捷入口-养老专区",
+      "login": false,
+      "status": "captured",
+      "desc": "养老专区 H5：个人养老金个税优惠计算器（税前年收入输入、减免税费约计算）、个人养老金全流程操作指南、开启个人养老金投资计划。",
+      "spec": "02_pages/P0013_养老专区/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0013_养老专区/screenshots/P0013_养老专区_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P1",
+      "components": [
+        "C005",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0020",
+      "name": "搜索",
+      "module": "搜索",
+      "level": 2,
+      "type": "原生 Activity",
+      "entry": "首页/指数行情 顶部搜索框",
+      "login": false,
+      "status": "captured",
+      "desc": "搜索页：搜索输入框、热词标签、热门搜索榜（排名基金+涨跌幅）、推荐基金列表；含键盘弹出/收起状态。",
+      "spec": "02_pages/P0020_搜索/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0020_搜索/screenshots/P0020_搜索_default_001.png",
+        "02_pages/P0020_搜索/states/P0020_搜索_keyboard_001.png"
+      ],
+      "states": [
+        "default",
+        "keyboard"
+      ],
+      "priority": "P0",
+      "components": [
+        "C003",
+        "C006"
+      ],
+      "source": "P0002/P0003",
+      "targets": [
+        "P0021"
+      ]
+    },
+    {
+      "id": "P0021",
+      "name": "搜索结果",
+      "module": "搜索",
+      "level": 3,
+      "type": "原生 Activity",
+      "entry": "搜索页-搜索按钮/热词",
+      "login": false,
+      "status": "captured",
+      "desc": "搜索结果页：相关基金（含加自选/0申购费买入）、相关指数、相关内容（市场热点资讯），可滚动。",
+      "spec": "02_pages/P0021_搜索结果/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0021_搜索结果/screenshots/P0021_搜索结果_default_001.png",
+        "02_pages/P0021_搜索结果/screenshots/P0021_搜索结果_scroll_001.png"
+      ],
+      "states": [
+        "default",
+        "scroll"
+      ],
+      "priority": "P0",
+      "components": [
+        "C006",
+        "C007",
+        "C010"
+      ],
+      "source": "P0020",
+      "targets": [
+        "P0004",
+        "P0022"
+      ]
+    },
+    {
+      "id": "P0022",
+      "name": "指数详情",
+      "module": "行情",
+      "level": 3,
+      "type": "WebView (H5)",
+      "entry": "指数行情-指数项 / 搜索结果-相关指数",
+      "login": false,
+      "status": "captured",
+      "desc": "指数详情页：指数名称/代码、现价涨跌、量比/总市值/涨平跌、Tab（全景/成分股）、子Tab（指数分析/财务表现/指数档案）、估值分析（PE/PB/PS/DID、历史估值图）、ROE、添加自选、查看相关基金。",
+      "spec": "02_pages/P0022_指数详情/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0022_指数详情/screenshots/P0022_指数详情_default_001.png",
+        "02_pages/P0022_指数详情/screenshots/P0022_指数详情_tab成分股_001.png"
+      ],
+      "states": [
+        "default",
+        "tab成分股"
+      ],
+      "priority": "P1",
+      "components": [
+        "C007",
+        "C010"
+      ],
+      "source": "P0003/P0021",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0023",
+      "name": "设置",
+      "module": "我的",
+      "level": 2,
+      "type": "原生 Activity",
+      "entry": "我的-设置齿轮图标",
+      "login": false,
+      "status": "captured",
+      "desc": "设置页：长辈模式、消息推送/个性化相关设置（推送未开启）、相关协议（隐私权政策协议可撤销）、给个好评、关于华夏基金管家。",
+      "spec": "02_pages/P0023_设置/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0023_设置/screenshots/P0023_设置_default_001.png"
+      ],
+      "states": [
+        "default",
+        "settings2"
+      ],
+      "priority": "P1",
+      "components": [
+        "C010"
+      ],
+      "source": "P0005",
+      "targets": [
+        "P0024",
+        "P0029",
+        "P0031",
+        "P0032"
+      ]
+    },
+    {
+      "id": "P0024",
+      "name": "关于华夏基金管家",
+      "module": "我的",
+      "level": 3,
+      "type": "原生 Activity",
+      "entry": "设置-关于华夏基金管家",
+      "login": false,
+      "status": "captured",
+      "desc": "关于页：Logo、版本号 V7.0.2（点击可触发版本检测）、发现新版本、下载二维码、App 介绍文案、APP备案号（京ICP备05004296号-12A）、版权信息。",
+      "spec": "02_pages/P0024_关于/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0024_关于/screenshots/P0024_关于_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P2",
+      "components": [
+        "C010"
+      ],
+      "source": "P0023",
+      "targets": []
+    },
+    {
+      "id": "P0029",
+      "name": "协议列表",
+      "module": "我的",
+      "level": 3,
+      "type": "原生 Activity",
+      "entry": "设置-相关协议 / 我的-相关协议",
+      "login": false,
+      "status": "captured",
+      "desc": "协议列表面：电子交易服务协议、隐私权政策摘要、隐私权政策、第三方共享个人信息清单、个人信息收集清单、算法推荐服务说明、金融产品或服务条款等，每项点击进入 H5 协议详情。",
+      "spec": "02_pages/P0029_协议列表/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0029_协议列表/screenshots/P0029_协议列表_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P2",
+      "components": [
+        "C006",
+        "C010"
+      ],
+      "source": "P0023/P0005",
+      "targets": [
+        "P0030"
+      ]
+    },
+    {
+      "id": "P0030",
+      "name": "协议详情H5",
+      "module": "公共",
+      "level": 4,
+      "type": "WebView (CommonWebActivity)",
+      "entry": "协议列表-任一协议项",
+      "login": false,
+      "status": "captured",
+      "desc": "协议正文 H5（CommonWebActivity）：以《华夏基金管理有限公司电子交易服务协议》为样本，含甲乙双方定义、第一条风险提示等完整条款文本，可上下滚动。",
+      "spec": "02_pages/P0030_协议详情H5/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0030_协议详情H5/screenshots/P0030_协议详情_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P2",
+      "components": [
+        "C001",
+        "C010"
+      ],
+      "source": "P0029",
+      "targets": []
+    },
+    {
+      "id": "P0031",
+      "name": "长辈模式",
+      "module": "我的",
+      "level": 3,
+      "type": "原生 Activity",
+      "entry": "设置-长辈模式",
+      "login": false,
+      "status": "captured",
+      "desc": "长辈模式开启页：开关说明「开启后部分页面文字和按钮会更大」、开启按钮。未实际开启以避免改变全局字号影响后续采集（状态未验证）。",
+      "spec": "02_pages/P0031_长辈模式/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0031_长辈模式/screenshots/P0031_长辈模式_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P2",
+      "components": [
+        "C009"
+      ],
+      "source": "P0023",
+      "targets": []
+    },
+    {
+      "id": "P0032",
+      "name": "推送设置",
+      "module": "我的",
+      "level": 3,
+      "type": "原生 Activity",
+      "entry": "设置-消息推送/个性化相关设置",
+      "login": false,
+      "status": "captured",
+      "desc": "消息推送/个性化相关设置页：应用外推送状态（推送未开启）、营销服务弹窗开关及说明、个性化推荐相关设置。",
+      "spec": "02_pages/P0032_推送设置/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0032_推送设置/screenshots/P0032_推送设置_default_001.png"
+      ],
+      "states": [
+        "default"
+      ],
+      "priority": "P2",
+      "components": [
+        "C010"
+      ],
+      "source": "P0023",
+      "targets": []
+    },
+    {
+      "id": "P0033",
+      "name": "注册",
+      "module": "账户",
+      "level": 2,
+      "type": "原生 Activity (FLAG_SECURE)",
+      "entry": "登录-还没有账户去注册",
+      "login": false,
+      "status": "captured_partial",
+      "desc": "手机号注册页：手机号输入（+86）、验证码输入框、获取验证码按钮、必选协议勾选（隐私权政策+用户协议）、可选中信财富广场账户勾选、注册按钮、已有账号去登录。窗口带 FLAG_SECURE，仅 UI 层级可读。",
+      "spec": "02_pages/P0033_注册/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0033_注册/screenshots/P0033_注册_UI结构_full.xml"
+      ],
+      "states": [
+        "default",
+        "protocol_dialog"
+      ],
+      "priority": "P0",
+      "components": [
+        "C008",
+        "C009"
+      ],
+      "source": "P0004",
+      "targets": [
+        "P0004"
+      ]
+    },
+    {
+      "id": "P0035",
+      "name": "找回密码",
+      "module": "账户",
+      "level": 2,
+      "type": "原生 Activity (FLAG_SECURE)",
+      "entry": "登录-忘记密码（需先同意隐私协议弹窗）",
+      "login": false,
+      "status": "captured_partial",
+      "desc": "找回密码页：真实姓名、证件类型（身份证）、证件号码、身份核实提示、下一步。涉及真实身份信息，按安全边界停止在填写前。窗口带 FLAG_SECURE，仅 UI 层级可读。",
+      "spec": "02_pages/P0035_找回密码/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0035_找回密码/screenshots/P0035_找回密码_UI结构_full.xml"
+      ],
+      "states": [
+        "default",
+        "protocol_dialog"
+      ],
+      "priority": "P0",
+      "components": [
+        "C008",
+        "C009"
+      ],
+      "source": "P0004",
+      "targets": []
+    },
+    {
+      "id": "P0037",
+      "name": "稳健理财H5",
+      "module": "活动",
+      "level": 2,
+      "type": "WebView (CommonWebActivity)",
+      "entry": "首页顶部 Banner 点击",
+      "login": false,
+      "status": "captured",
+      "desc": "稳健理财活动 H5（追求稳健专区）：Banner 图、基金产品卡片（华夏鼎茂债券A，近1年涨跌幅 +3.98%）、业绩比较基准与风险提示长文，可滚动。Banner 实际跳转目标为稳健理财活动页（非会员中心）。",
+      "spec": "02_pages/P0037_稳健理财H5/PAGE_SPEC.md",
+      "shots": [
+        "02_pages/P0037_稳健理财H5/screenshots/P0037_稳健理财_default_001.png",
+        "02_pages/P0037_稳健理财H5/screenshots/P0037_稳健理财_scroll_001.png"
+      ],
+      "states": [
+        "default",
+        "scroll"
+      ],
+      "priority": "P1",
+      "components": [
+        "C005",
+        "C010"
+      ],
+      "source": "P0002",
+      "targets": [
+        "P0004"
+      ]
+    }
+  ],
+  "pending_pages": [
+    {
+      "id": "P0006",
+      "name": "首页快捷区-全部基金跳转过渡",
+      "module": "首页",
+      "status": "duplicate",
+      "note": "与 P0007 合并"
+    },
+    {
+      "id": "P0008",
+      "name": "基金详情",
+      "module": "基金",
+      "status": "blocked",
+      "note": "点击基金触发登录拦截；需登录账号，未验证"
+    },
+    {
+      "id": "P0010",
+      "name": "我的自选",
+      "module": "基金",
+      "status": "blocked",
+      "note": "触发登录拦截；未验证"
+    },
+    {
+      "id": "P0014",
+      "name": "Android 桌面（误触）",
+      "module": "系统",
+      "status": "duplicate",
+      "note": "返回键退出到桌面，非 App 页面"
+    },
+    {
+      "id": "P0015",
+      "name": "意见反馈",
+      "module": "我的",
+      "status": "blocked",
+      "note": "触发登录拦截；未验证"
+    },
+    {
+      "id": "P0016",
+      "name": "常见问题",
+      "module": "我的",
+      "status": "pending",
+      "note": "未采集"
+    },
+    {
+      "id": "P0017",
+      "name": "投顾解约",
+      "module": "我的",
+      "status": "pending",
+      "note": "未采集"
+    },
+    {
+      "id": "P0018",
+      "name": "相关协议",
+      "module": "我的",
+      "status": "pending",
+      "note": "未采集"
+    },
+    {
+      "id": "B0024",
+      "name": "关于华夏基金管家（旧编号）",
+      "module": "我的",
+      "status": "duplicate",
+      "note": "已采集，见 PAGES P0024"
+    },
+    {
+      "id": "B0026",
+      "name": "注册（旧编号）",
+      "module": "账户",
+      "status": "duplicate",
+      "note": "已以 UI 结构采集，见 P0033"
+    },
+    {
+      "id": "B0027",
+      "name": "忘记密码（旧编号）",
+      "module": "账户",
+      "status": "duplicate",
+      "note": "已以 UI 结构采集，见 P0035"
+    },
+    {
+      "id": "B0028",
+      "name": "交易记录",
+      "module": "账户",
+      "status": "blocked",
+      "note": "需登录，未验证"
+    },
+    {
+      "id": "B0029",
+      "name": "银行卡管理",
+      "module": "账户",
+      "status": "blocked",
+      "note": "需登录+实名，未验证"
+    },
+    {
+      "id": "B0030",
+      "name": "长辈模式（旧编号）",
+      "module": "我的",
+      "status": "duplicate",
+      "note": "已采集，见 PAGES P0031"
+    },
+    {
+      "id": "B0031",
+      "name": "消息推送/个性化设置（旧编号）",
+      "module": "我的",
+      "status": "duplicate",
+      "note": "已采集为 P0032"
+    },
+    {
+      "id": "P0034",
+      "name": "基金详情",
+      "module": "基金",
+      "status": "blocked",
+      "note": "需登录账号，涉及真实资金展示，未验证"
+    },
+    {
+      "id": "P0036",
+      "name": "基金购买/赎回/转换/定投流程",
+      "module": "交易",
+      "status": "blocked",
+      "note": "需登录+实名+风测，涉及真实资金，按安全边界停止"
+    },
+    {
+      "id": "P0038",
+      "name": "实名认证/开户/风险测评",
+      "module": "账户",
+      "status": "blocked",
+      "note": "需真实身份信息，按安全边界停止，不得虚构"
+    },
+    {
+      "id": "P0039",
+      "name": "持仓/收益/交易记录（登录后）",
+      "module": "资产",
+      "status": "blocked",
+      "note": "需登录，未验证"
+    },
+    {
+      "id": "P0040",
+      "name": "消息通知/客服中心/帮助中心",
+      "module": "公共",
+      "status": "blocked",
+      "note": "多入口需登录，未验证"
+    }
+  ]
+}

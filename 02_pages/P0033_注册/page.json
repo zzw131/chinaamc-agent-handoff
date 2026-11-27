@@ -1,0 +1,41 @@
+{
+  "id": "P0033",
+  "name": "注册",
+  "module": "账户",
+  "level": 2,
+  "type": "原生 Activity (FLAG_SECURE)",
+  "entry": "登录-还没有账户去注册",
+  "login_required": false,
+  "status": "captured_partial",
+  "priority": "P0",
+  "description": "手机号注册页：手机号输入（+86）、验证码输入框、获取验证码按钮、必选协议勾选（隐私权政策+用户协议）、可选中信财富广场账户勾选、注册按钮、已有账号去登录。窗口带 FLAG_SECURE，仅 UI 层级可读。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [],
+    "states": [],
+    "annotations": [],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0033_注册/screenshots/P0033_注册_UI结构_full.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "protocol_dialog"
+  ],
+  "components": [
+    "C008",
+    "C009"
+  ],
+  "source": "P0004",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0033-I001",
+    "P0033-I002",
+    "P0033-I003",
+    "P0033-I004",
+    "P0033-I005"
+  ]
+}

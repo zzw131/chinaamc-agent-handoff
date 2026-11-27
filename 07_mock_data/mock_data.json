@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "$comment": "示例数据。observe 区块中的文字/数值来自 2026-11-27 真实截图观察或 uiautomator dump；mock 区块为占位示例，禁止用于真实业务。所有账户/身份/资金字段均为脱敏占位或 null，不含任何真实个人信息。",
+    "generatedAt": "2026-11-27",
+    "sourceApp": {
+      "package": "com.chinaamc.MainActivityAMC",
+      "version": "7.0.2"
+    },
+    "baselineScreenshots": [
+      "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+      "02_pages/P0003_指数行情/screenshots/P0003_指数行情_default_001.png",
+      "02_pages/P0005_我的/screenshots/P0005_我的_default_001.png"
+    ],
+    "conventions": {
+      "observed": "来自截图/dump 的真实观察值，可回溯截图",
+      "mock": "占位示例值，以 MOCK_ 前缀或占位符标识",
+      "desensitized": "截图中已脱敏显示（****** / ****），非真实值"
+    }
+  },
+  "homePage": {
+    "$source": "observed from P0002_首页_default_001.png 与 P0002_首页_default_001.xml",
+    "pageId": "P0002",
+    "pageName": "首页",
+    "loginRequired": false,
+    "searchHint": "黄金",
+    "banner": {
+      "title": "华夏基金会员中心重磅上新！",
+      "subtitle": "会员每月可领专属权益",
+      "ctaText": "点击查看",
+      "disclaimer": "（Banner 底部免责声明小字，未逐字采集，见原截图）",
+      "indicatorCount": 3,
+      "_note": "title/subtitle/ctaText 为截图观察；disclaimer 为占位说明；indicatorCount 为目视计数，归属未验证"
+    },
+    "quickEntries": [
+      { "id": "all_funds", "title": "全部基金", "hotBadge": false, "targetPageId": "P0007" },
+      { "id": "my_watchlist", "title": "我的自选", "hotBadge": false, "targetPageId": "P0004" },
+      { "id": "member_center", "title": "会员中心", "hotBadge": true, "targetPageId": "P0011" },
+      { "id": "target_invest", "title": "目标投", "hotBadge": true, "targetPageId": "P0012" },
+      { "id": "pension_zone", "title": "养老专区", "hotBadge": false, "targetPageId": "P0013" }
+    ],
+    "recommendCard": {
+      "headline": "资金散落多平台，难打理？",
+      "subline": "直销归集，轻松搞定！",
+      "tag": "直销平台所有产品0申购费",
+      "disclaimer": "（卡片底部小字，未逐字采集，见原截图）",
+      "_note": "文案为截图观察；金币插图与免责声明未采集"
+    },
+    "coreFundCard": {
+      "sectionTitle": "核心配置",
+      "fundName": "华夏中证红利低波动ETF联接A",
+      "typeTag": "指数型",
+      "riskLevel": "中高风险",
+      "feeTag": "直销平台所有产品0申购费",
+      "factors": [
+        { "title": "红利因子", "description": "关注分红水平\n连续分红的能力+质量+潜力" },
+        { "title": "低波因子", "description": "力控整体波动\n过滤近1年较高波动率个股" }
+      ],
+      "returnBars": [
+        { "name": "红利低波全收益", "value": "17.26%" },
+        { "name": "沪深300全收益", "value": "8.82%" },
+        { "name": "上证10年期国债", "value": "3.87%" }
+      ],
+      "disclaimer": "注:数据来自iFinD,截至2026.10.30。行业分类标准为中证二级行业。根据中证指数公司中证A500指数编制方法…（原文未完整采集）",
+      "_note": "基金名称、因子文案、年化数值、数据来源均来自截图观察；长免责声明按截图可见开头记录，未完整采集"
+    },
+    "hoverMenu": "财富广场"
+  },
+  "marketPage": {
+    "$source": "observed from P0003_指数行情_default_001.png 与 P0003_指数行情_default_001.xml",
+    "pageId": "P0003",
+    "pageName": "指数行情",
+    "searchHint": "华夏纯债债券",
+    "majorIndices": [
+      { "name": "上证指数", "changePercent": "-0.07%", "lastPrice": "3474.62", "_direction": "down" },
+      { "name": "深证成指", "changePercent": "+0.51%", "lastPrice": "10135.27", "_direction": "up" },
+      { "name": "创业板指", "changePercent": "+0.98%", "lastPrice": "2211.31", "_direction": "up" },
+      { "name": "恒生指数", "changePercent": "+0.56%", "lastPrice": "22351.31", "_direction": "up" },
+      { "name": "恒生科技指数", "changePercent": "+2.02%", "lastPrice": "3486.26", "_direction": "up" },
+      { "name": "上证50", "changePercent": "-0.36%", "lastPrice": "2743.67", "_direction": "down" },
+      { "name": "沪深300", "changePercent": "-0.28%", "lastPrice": "3889.49", "_direction": "down" },
+      { "name": "科创50", "changePercent": "+1.20%", "lastPrice": "1184.07", "_direction": "up" }
+    ],
+    "_majorIndicesNote": "名称/涨跌幅/点位来自 uiautomator dump 文本节点；横滑超出部分（恒生科技指数等）bounds 为 [0,0][0,0]，表示不在可视区但仍由 H5 暴露",
+    "heatmap": [
+      { "name": "金融科技", "changePercent": "+4.45%", "colorLevel": "strong", "_dumpValue": "+4.42%" },
+      { "name": "云计算", "changePercent": "+3.77%", "colorLevel": "medium" },
+      { "name": "半导体材料设备", "changePercent": "+3.30%", "colorLevel": "medium" },
+      { "name": "科创半导体材料设备", "changePercent": "+3.23%", "colorLevel": "medium" },
+      { "name": "创业板人工智能", "changePercent": "+2.62%", "colorLevel": "light" },
+      { "name": "科创100", "changePercent": "+2.50%", "colorLevel": "light" },
+      { "name": "中证信创", "changePercent": "+2.36%", "colorLevel": "light" },
+      { "name": "恒生生物科技指数", "changePercent": "+2.28%", "colorLevel": "light" },
+      { "name": "通用航空", "changePercent": "+2.15%", "colorLevel": "light" }
+    ],
+    "_heatmapNote": "截图与 uiautomator dump 对「金融科技」涨幅记载不同（+4.45% vs +4.42%），以截图为准并保留差异备注；colorLevel 为按采样色阶的估算分类",
+    "categories": [
+      { "label": "全部(83)", "count": 83, "selected": true },
+      { "label": "宽基(18)", "count": 18, "selected": false },
+      { "label": "香港市场(12)", "count": 12, "selected": false },
+      { "label": "新能源(8)", "count": 8, "selected": false },
+      { "label": "科技(15)", "count": 15, "selected": false },
+      { "label": "医药(3)", "count": 3, "selected": false },
+      { "label": "消费(1)", "count": 1, "selected": false },
+      { "label": "大金融(4)", "count": 4, "selected": false },
+      { "label": "周期(6)", "count": 6, "selected": false },
+      { "label": "政策(2)", "count": 2, "selected": false },
+      { "label": "制造(2)", "count": 2, "selected": false },
+      { "label": "策略(11)", "count": 11, "selected": false },
+      { "label": "其他(1)", "count": 1, "selected": false }
+    ],
+    "indexRows": [
+      { "name": "金融科技", "code": "930986.CSI", "valuationLabel": "过低", "changePercent": "+4.45%", "pe": "35.42", "pePercentile": "4.53%", "pb": "3.32", "pbPercentile": "10.89%" },
+      { "name": "云计算", "code": "930851.CSI", "valuationLabel": "过低", "changePercent": "+3.77%", "pe": "33.02", "pePercentile": "0.16%", "pb": "4.07", "pbPercentile": "33.66%" },
+      { "name": "半导体材料设备", "code": "931743.CSI", "valuationLabel": "偏高", "changePercent": "+3.30%", "pe": "73.93", "pePercentile": "75.24%", "pb": "6.65", "pbPercentile": "76.89%" },
+      { "name": "科创半导体材料设备", "code": "950125.CSI", "valuationLabel": "过低", "changePercent": "+3.23%", "pe": "83.33", "pePercentile": "0.24%", "pb": "6.43", "pbPercentile": "45.58%" },
+      { "name": "创业板人工智能", "code": "970070.CNI", "valuationLabel": "过低", "changePercent": "+2.62%", "pe": "26.97", "pePercentile": "0.72%", "pb": "5.19", "pbPercentile": "16.57%" },
+      { "name": "科创100", "code": "000698.SH", "valuationLabel": "过低", "changePercent": "+2.50%", "pe": "52.70", "pePercentile": "0.00%", "pb": "4.29", "pbPercentile": "48.81%" }
+    ],
+    "lastUpdated": "数据更新成功 11-27 10:10:55"
+  },
+  "fundList": {
+    "$source": "mock — P0007 全部基金为 WebView，未逐项取证，以下均为占位示例",
+    "pageId": "P0007",
+    "list": [
+      { "fundCode": "MOCK000001", "fundName": "MOCK_示例灵活配置混合A", "netValue": "MOCK_1.2345", "changePercent": "MOCK_+0.88%", "riskLevel": "MOCK_中风险" },
+      { "fundCode": "MOCK000002", "fundName": "MOCK_示例沪深300指数A", "netValue": "MOCK_2.3456", "changePercent": "MOCK_-0.32%", "riskLevel": "MOCK_中高风险" }
+    ],
+    "hasMore": null
+  },
+  "searchResult": {
+    "$source": "keyword observed from 首页提示词；结果项为 mock",
+    "pageId": "P0021",
+    "keyword": "黄金",
+    "items": [
+      { "type": "MOCK_fund", "name": "MOCK_示例黄金主题股票A", "code": "MOCK000003", "changePercent": "MOCK_+1.25%" },
+      { "type": "MOCK_index", "name": "MOCK_示例SSH黄金股票", "code": "MOCK931238", "changePercent": "MOCK_+0.76%" }
+    ]
+  },
+  "userAccount": {
+    "$source": "observed from P0005_我的_default_001.png — 未登录、已脱敏；真实账户数据不存在于本工程",
+    "loginState": "未登录",
+    "nickname": "登录/注册",
+    "welcomeText": "欢迎来到华夏基金",
+    "totalAssets": "******",
+    "points": "****",
+    "weeklyReport": "****",
+    "accountId": null,
+    "identity": null,
+    "bankCards": null,
+    "holdings": null,
+    "transactions": null,
+    "memberCardTitle": "加入会员 尊享权益",
+    "quickFunctions": [
+      { "title": "交易记录", "targetPageId": "P0028", "_note": "入口存在，需登录，未验证" },
+      { "title": "银行卡", "targetPageId": "P0029", "_note": "入口存在，需登录+实名，未验证" },
+      { "title": "定投管理", "targetPageId": null, "_note": "入口存在，未验证" }
+    ],
+    "commonFunctions": [
+      { "title": "月度账单", "hotBadge": false },
+      { "title": "资产归集", "hotBadge": true },
+      { "title": "会员中心", "hotBadge": false },
+      { "title": "高端理财认证", "hotBadge": false }
+    ],
+    "menuItems": [
+      { "title": "意见反馈", "targetPageId": "P0015" },
+      { "title": "常见问题", "targetPageId": "P0016" },
+      { "title": "投顾解约", "targetPageId": "P0017" },
+      { "title": "相关协议", "targetPageId": "P0018" }
+    ],
+    "securityTip": "华夏基金・守护信息安全"
+  },
+  "agreements": {
+    "$source": "协议列表条目名称可观察；正文与版本未采集，禁止编造真实法律条款",
+    "pageId": "P0029",
+    "title": "相关协议",
+    "titleList": null,
+    "content": null,
+    "version": null,
+    "effectiveDate": null,
+    "_note": "未逐项读取 P0029 协议列表标题，因此 titleList 为 null；协议正文须由真实来源提供，不得用 mock 冒充"
+  }
+}

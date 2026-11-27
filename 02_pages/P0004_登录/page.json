@@ -1,0 +1,47 @@
+{
+  "id": "P0004",
+  "name": "登录",
+  "module": "账户",
+  "level": 1,
+  "type": "原生 Activity (FLAG_SECURE)",
+  "entry": "底部导航-资产 / 我的自选 / 加自选 / 基金详情购买",
+  "login_required": true,
+  "status": "captured_partial",
+  "priority": "P0",
+  "description": "账号登录页：账户类型选择（手机号/身份证号）、账号输入、忘记密码、下一步、注册入口、协议勾选、微信登录、手机号快捷登录。窗口带 FLAG_SECURE，截图为黑屏，以 UI 层级为准。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [],
+    "states": [],
+    "annotations": [],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0004_登录/screenshots/P0004_登录_UI结构_full.xml",
+      "02_pages/P0004_登录/screenshots/P0004_登录_default_001.xml",
+      "02_pages/P0004_登录/states/P0004_登录_协议弹窗_UI结构.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C008",
+    "C009"
+  ],
+  "source": "P0002/P0003/P0005",
+  "targets": [
+    "P0033",
+    "P0035"
+  ],
+  "interactions": [
+    "P0004-I001",
+    "P0004-I002",
+    "P0004-I003",
+    "P0004-I004",
+    "P0004-I005",
+    "P0004-I006",
+    "P0004-I007",
+    "P0004-I008",
+    "P0004-I009"
+  ]
+}

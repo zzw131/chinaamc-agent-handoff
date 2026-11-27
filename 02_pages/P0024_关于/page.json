@@ -1,0 +1,38 @@
+{
+  "id": "P0024",
+  "name": "关于华夏基金管家",
+  "module": "我的",
+  "level": 3,
+  "type": "原生 Activity",
+  "entry": "设置-关于华夏基金管家",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P2",
+  "description": "关于页：Logo、版本号 V7.0.2（点击可触发版本检测）、发现新版本、下载二维码、App 介绍文案、APP备案号（京ICP备05004296号-12A）、版权信息。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0024_关于/screenshots/P0024_关于_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0024_关于/annotations/P0024_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0024_关于/screenshots/P0024_关于_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C010"
+  ],
+  "source": "P0023",
+  "targets": [],
+  "interactions": [
+    "P0024-I001",
+    "P0024-I002"
+  ]
+}

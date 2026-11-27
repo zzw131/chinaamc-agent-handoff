@@ -1,0 +1,53 @@
+{
+  "id": "P0003",
+  "name": "指数行情",
+  "module": "行情",
+  "level": 1,
+  "type": "原生 Fragment",
+  "entry": "底部导航-指数行情",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "指数行情页：顶部搜索框、主要指数横滑卡片（上证/深证/创业板/恒生等）、指数热力图、分类 Tab（全部83/宽基18/香港市场12/新能源8/科技15 等）、指数列表（涨跌幅/PE/PB/估值）。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0003_指数行情/screenshots/P0003_指数行情_default_001.png",
+      "02_pages/P0003_指数行情/screenshots/P0003_指数行情_scroll_001.png",
+      "02_pages/P0003_指数行情/screenshots/P0003_指数行情_tab宽基_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0003_指数行情/annotations/P0003_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0003_指数行情/screenshots/P0003_指数行情_default_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "loading",
+    "tab宽基",
+    "scroll"
+  ],
+  "components": [
+    "C002",
+    "C006",
+    "C007",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0020",
+    "P0022"
+  ],
+  "interactions": [
+    "P0003-I001",
+    "P0003-I002",
+    "P0003-I003",
+    "P0003-I004",
+    "P0003-I005",
+    "P0003-I006"
+  ]
+}

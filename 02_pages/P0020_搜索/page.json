@@ -1,0 +1,44 @@
+{
+  "id": "P0020",
+  "name": "搜索",
+  "module": "搜索",
+  "level": 2,
+  "type": "原生 Activity",
+  "entry": "首页/指数行情 顶部搜索框",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "搜索页：搜索输入框、热词标签、热门搜索榜（排名基金+涨跌幅）、推荐基金列表；含键盘弹出/收起状态。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0020_搜索/screenshots/P0020_搜索_default_001.png"
+    ],
+    "states": [
+      "02_pages/P0020_搜索/states/P0020_搜索_keyboard_001.png"
+    ],
+    "annotations": [
+      "02_pages/P0020_搜索/annotations/P0020_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": []
+  },
+  "states": [
+    "default",
+    "keyboard"
+  ],
+  "components": [
+    "C003",
+    "C006"
+  ],
+  "source": "P0002/P0003",
+  "targets": [
+    "P0021"
+  ],
+  "interactions": [
+    "P0020-I001",
+    "P0020-I002",
+    "P0020-I003",
+    "P0020-I004"
+  ]
+}

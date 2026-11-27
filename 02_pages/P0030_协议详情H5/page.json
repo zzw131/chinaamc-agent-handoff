@@ -1,0 +1,34 @@
+{
+  "id": "P0030",
+  "name": "协议详情H5",
+  "module": "公共",
+  "level": 4,
+  "type": "WebView (CommonWebActivity)",
+  "entry": "协议列表-任一协议项",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P2",
+  "description": "协议正文 H5（CommonWebActivity）：以《华夏基金管理有限公司电子交易服务协议》为样本，含甲乙双方定义、第一条风险提示等完整条款文本，可上下滚动。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0030_协议详情H5/screenshots/P0030_协议详情_default_001.png"
+    ],
+    "states": [],
+    "annotations": [],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0030_协议详情H5/screenshots/P0030_协议详情_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C001",
+    "C010"
+  ],
+  "source": "P0029",
+  "targets": [],
+  "interactions": []
+}

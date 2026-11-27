@@ -1,0 +1,170 @@
+[
+  {
+    "page_id": "P0001",
+    "name": "启动与隐私协议",
+    "type": "弹窗/启动页",
+    "entry": "App 冷启动",
+    "path": "02_pages/P0001_启动与协议/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0002",
+    "name": "首页",
+    "type": "原生 Fragment",
+    "entry": "底部导航-首页 / 协议同意后默认进入",
+    "path": "02_pages/P0002_首页/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0003",
+    "name": "指数行情",
+    "type": "原生 Fragment",
+    "entry": "底部导航-指数行情",
+    "path": "02_pages/P0003_指数行情/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0004",
+    "name": "登录",
+    "type": "原生 Activity (FLAG_SECURE)",
+    "entry": "底部导航-资产 / 我的自选 / 加自选 / 基金详情购买",
+    "path": "02_pages/P0004_登录/PAGE_SPEC.md",
+    "login_required": true
+  },
+  {
+    "page_id": "P0005",
+    "name": "我的",
+    "type": "原生 Fragment",
+    "entry": "底部导航-我的",
+    "path": "02_pages/P0005_我的/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0007",
+    "name": "全部基金",
+    "type": "WebView (H5)",
+    "entry": "首页快捷入口-全部基金",
+    "path": "02_pages/P0007_全部基金/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0011",
+    "name": "会员中心",
+    "type": "原生 RN Activity",
+    "entry": "首页快捷入口-会员中心 / 我的-会员中心",
+    "path": "02_pages/P0011_会员中心/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0012",
+    "name": "目标投",
+    "type": "WebView (H5活动)",
+    "entry": "首页快捷入口-目标投",
+    "path": "02_pages/P0012_目标投/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0013",
+    "name": "养老专区",
+    "type": "WebView (H5)",
+    "entry": "首页快捷入口-养老专区",
+    "path": "02_pages/P0013_养老专区/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0020",
+    "name": "搜索",
+    "type": "原生 Activity",
+    "entry": "首页/指数行情 顶部搜索框",
+    "path": "02_pages/P0020_搜索/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0021",
+    "name": "搜索结果",
+    "type": "原生 Activity",
+    "entry": "搜索页-搜索按钮/热词",
+    "path": "02_pages/P0021_搜索结果/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0022",
+    "name": "指数详情",
+    "type": "WebView (H5)",
+    "entry": "指数行情-指数项 / 搜索结果-相关指数",
+    "path": "02_pages/P0022_指数详情/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0023",
+    "name": "设置",
+    "type": "原生 Activity",
+    "entry": "我的-设置齿轮图标",
+    "path": "02_pages/P0023_设置/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0024",
+    "name": "关于华夏基金管家",
+    "type": "原生 Activity",
+    "entry": "设置-关于华夏基金管家",
+    "path": "02_pages/P0024_关于/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0029",
+    "name": "协议列表",
+    "type": "原生 Activity",
+    "entry": "设置-相关协议 / 我的-相关协议",
+    "path": "02_pages/P0029_协议列表/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0030",
+    "name": "协议详情H5",
+    "type": "WebView (CommonWebActivity)",
+    "entry": "协议列表-任一协议项",
+    "path": "02_pages/P0030_协议详情H5/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0031",
+    "name": "长辈模式",
+    "type": "原生 Activity",
+    "entry": "设置-长辈模式",
+    "path": "02_pages/P0031_长辈模式/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0032",
+    "name": "推送设置",
+    "type": "原生 Activity",
+    "entry": "设置-消息推送/个性化相关设置",
+    "path": "02_pages/P0032_推送设置/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0033",
+    "name": "注册",
+    "type": "原生 Activity (FLAG_SECURE)",
+    "entry": "登录-还没有账户去注册",
+    "path": "02_pages/P0033_注册/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0035",
+    "name": "找回密码",
+    "type": "原生 Activity (FLAG_SECURE)",
+    "entry": "登录-忘记密码（需先同意隐私协议弹窗）",
+    "path": "02_pages/P0035_找回密码/PAGE_SPEC.md",
+    "login_required": false
+  },
+  {
+    "page_id": "P0037",
+    "name": "稳健理财H5",
+    "type": "WebView (CommonWebActivity)",
+    "entry": "首页顶部 Banner 点击",
+    "path": "02_pages/P0037_稳健理财H5/PAGE_SPEC.md",
+    "login_required": false
+  }
+]

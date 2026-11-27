@@ -1,0 +1,49 @@
+{
+  "id": "P0023",
+  "name": "设置",
+  "module": "我的",
+  "level": 2,
+  "type": "原生 Activity",
+  "entry": "我的-设置齿轮图标",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P1",
+  "description": "设置页：长辈模式、消息推送/个性化相关设置（推送未开启）、相关协议（隐私权政策协议可撤销）、给个好评、关于华夏基金管家。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0023_设置/screenshots/P0023_设置_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0023_设置/annotations/P0023_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0023_设置/screenshots/P0023_设置_default_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "settings2"
+  ],
+  "components": [
+    "C010"
+  ],
+  "source": "P0005",
+  "targets": [
+    "P0024",
+    "P0029",
+    "P0031",
+    "P0032"
+  ],
+  "interactions": [
+    "P0023-I001",
+    "P0023-I002",
+    "P0023-I003",
+    "P0023-I004",
+    "P0023-I005",
+    "P0023-I006",
+    "P0023-I007"
+  ]
+}

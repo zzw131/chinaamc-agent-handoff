@@ -1,0 +1,35 @@
+{
+  "note": "本目录仅收录授权范围内可合法取得的视觉素材。绝大多数素材只能以截图裁切形式提供参考，不代表原始设计源文件。未绕过 App 安全保护提取受保护资源。",
+  "reference_crops": [
+    {
+      "id": "A001",
+      "name": "首页顶部 Banner",
+      "type": "banner",
+      "path": "06_assets/banners/P0002_首页Banner_截图裁切参考.png",
+      "source_page": "P0002",
+      "source_screenshot": "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+      "crop_bounds": [0, 0, 1080, 633],
+      "original_asset": false,
+      "note": "截图裁切参考，非原始设计素材；Banner 为轮播，仅采集到其中两个状态"
+    },
+    {
+      "id": "A002",
+      "name": "首页快捷入口图标组",
+      "type": "icons",
+      "path": "06_assets/icons/P0002_快捷入口图标_截图裁切参考.png",
+      "source_page": "P0002",
+      "source_screenshot": "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+      "crop_bounds": [65, 816, 1015, 880],
+      "original_asset": false,
+      "note": "截图裁切参考，含全部基金/我的自选/会员中心/目标投/养老专区 5 个入口图标"
+    }
+  ],
+  "missing_original_assets": [
+    "Logo 原始矢量/位图素材（仅有截图中的展示）",
+    "底部导航图标的原始 icon 资源",
+    "Banner 活动页原始设计图与文案素材",
+    "插画、空状态插图、背景装饰图形的原始素材",
+    "品牌字体文件"
+  ],
+  "extraction_policy": "未使用反编译、脱壳、Hook、内存抓取等手段提取 App 内部受保护资源；所有参考素材均来自 adb 原始截图裁切。"
+}

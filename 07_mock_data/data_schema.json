@@ -1,0 +1,247 @@
+{
+  "meta": {
+    "$comment": "华夏基金管家 App v7.0.2 可观察数据的数据结构定义。仅描述截图观察所得字段与必要的 mock 占位；不是真实服务端接口定义。禁止据此虚构真实接口或业务规则。",
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-11-27",
+    "sourceApp": {
+      "package": "com.chinaamc.MainActivityAMC",
+      "version": "7.0.2"
+    },
+    "conventions": {
+      "source": {
+        "observed": "文本/数值/结构来自真实截图或 uiautomator dump，可回溯到具体截图",
+        "mock": "为演示或占位而编造的示例值，不代表真实业务数据"
+      },
+      "dynamic": {
+        "true": "真实 App 中该项随行情、时间、登录状态或用户操作变化",
+        "false": "静态文案或固定结构"
+      },
+      "privacy": "任何账户、身份、资金字段均为脱敏占位或 null；未采集真实个人信息"
+    }
+  },
+  "types": {
+    "HomePage": {
+      "description": "首页 P0002 的整体可观察结构，来自 P0002 default 截图与 UI dump。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "pageId": { "type": "string", "source": "observed", "dynamic": false, "description": "固定值 P0002" },
+        "pageName": { "type": "string", "source": "observed", "dynamic": false, "description": "首页" },
+        "loginRequired": { "type": "boolean", "source": "observed", "dynamic": false, "description": "未登录可访问" },
+        "searchHint": { "type": "string", "source": "observed", "dynamic": true, "description": "搜索框轮播提示词，截图观察到「黄金」；UI dump 另见「直销平台资产归集」" },
+        "banner": { "type": "HomeBanner", "source": "observed", "dynamic": true, "description": "顶部轮播" },
+        "quickEntries": { "type": "HomeQuickEntry[]", "source": "observed", "dynamic": false, "description": "5 个快捷入口" },
+        "recommendCard": { "type": "HomeRecommendCard", "source": "observed", "dynamic": true, "description": "推荐活动卡" },
+        "coreFundCard": { "type": "HomeCoreFundCard", "source": "observed", "dynamic": true, "description": "核心配置基金卡" },
+        "hoverMenu": { "type": "string", "source": "observed", "dynamic": false, "description": "右侧悬浮「财富广场」，交互未验证" }
+      }
+    },
+    "HomeBanner": {
+      "description": "首页顶部 Banner，截图 default 与 banner状态2 各见一种状态。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "imageUrl": { "type": "string|null", "source": "mock", "dynamic": true, "description": "真实图片资源未采集，null 或 mock 占位" },
+        "title": { "type": "string", "source": "observed", "dynamic": true, "description": "主标题，如「华夏基金会员中心重磅上新！」" },
+        "subtitle": { "type": "string", "source": "observed", "dynamic": true, "description": "副标题，如「会员每月可领专属权益」" },
+        "ctaText": { "type": "string", "source": "observed", "dynamic": true, "description": "CTA 文案，如「点击查看」" },
+        "disclaimer": { "type": "string", "source": "observed", "dynamic": false, "description": "Banner 底部小字免责声明" },
+        "indicatorCount": { "type": "number|null", "source": "observed", "dynamic": false, "description": "截图目视 3 个指示点，精确归属未验证" }
+      }
+    },
+    "HomeQuickEntry": {
+      "description": "首页快捷入口项。",
+      "source": "observed",
+      "dynamic": false,
+      "fields": {
+        "id": { "type": "string", "source": "observed", "dynamic": false, "description": "稳定标识，如 all_funds" },
+        "title": { "type": "string", "source": "observed", "dynamic": false, "description": "入口文字：全部基金/我的自选/会员中心/目标投/养老专区" },
+        "icon": { "type": "string|null", "source": "mock", "dynamic": false, "description": "图标资源未采集" },
+        "hotBadge": { "type": "boolean", "source": "observed", "dynamic": false, "description": "会员中心与目标投截图中带 Hot 角标" },
+        "targetPageId": { "type": "string", "source": "observed", "dynamic": false, "description": "已验证跳转目标：P0007/P0004/P0011/P0012/P0013" }
+      }
+    },
+    "HomeRecommendCard": {
+      "description": "首页粉红渐变推荐卡。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "headline": { "type": "string", "source": "observed", "dynamic": true, "description": "「资金散落多平台，难打理？」" },
+        "subline": { "type": "string", "source": "observed", "dynamic": true, "description": "「直销归集，轻松搞定！」" },
+        "tag": { "type": "string", "source": "observed", "dynamic": true, "description": "「直销平台所有产品0申购费」" },
+        "imageUrl": { "type": "string|null", "source": "mock", "dynamic": true, "description": "金币插图资源未采集" },
+        "disclaimer": { "type": "string", "source": "observed", "dynamic": false, "description": "底部小字说明" }
+      }
+    },
+    "HomeCoreFundCard": {
+      "description": "首页「核心配置」基金推荐卡。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "sectionTitle": { "type": "string", "source": "observed", "dynamic": false, "description": "「核心配置」" },
+        "fundName": { "type": "string", "source": "observed", "dynamic": true, "description": "「华夏中证红利低波动ETF联接A」" },
+        "typeTag": { "type": "string", "source": "observed", "dynamic": false, "description": "「指数型」" },
+        "riskLevel": { "type": "string", "source": "observed", "dynamic": false, "description": "「中高风险」，风险色值未采集" },
+        "feeTag": { "type": "string", "source": "observed", "dynamic": true, "description": "「直销平台所有产品0申购费」" },
+        "factors": { "type": "HomeFactor[]", "source": "observed", "dynamic": false, "description": "红利因子 / 低波因子双卡" },
+        "returnBars": { "type": "FundReturnBar[]", "source": "observed", "dynamic": true, "description": "各指数基日以来年化涨跌幅条形" },
+        "disclaimer": { "type": "string", "source": "observed", "dynamic": false, "description": "数据来源 iFinD、截止日期、行业分类说明" }
+      }
+    },
+    "HomeFactor": {
+      "description": "核心卡内因子子卡。",
+      "source": "observed",
+      "dynamic": false,
+      "fields": {
+        "title": { "type": "string", "source": "observed", "dynamic": false, "description": "如「红利因子」「低波因子」" },
+        "description": { "type": "string", "source": "observed", "dynamic": false, "description": "如「关注分红水平 连续分红的能力+质量+潜力」" }
+      }
+    },
+    "FundReturnBar": {
+      "description": "年化涨跌幅条形项。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "name": { "type": "string", "source": "observed", "dynamic": false, "description": "如「红利低波全收益」" },
+        "value": { "type": "string", "source": "observed", "dynamic": true, "description": "如「17.26%」，含百分号" },
+        "barWidth": { "type": "number|null", "source": "mock", "dynamic": true, "description": "视觉条宽，未精确测量" }
+      }
+    },
+    "MarketPage": {
+      "description": "指数行情页 P0003 结构。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "pageId": { "type": "string", "source": "observed", "dynamic": false, "description": "固定值 P0003" },
+        "searchHint": { "type": "string", "source": "observed", "dynamic": true, "description": "截图「华夏纯债债券」" },
+        "majorIndices": { "type": "MarketIndexQuote[]", "source": "observed", "dynamic": true, "description": "顶部横滑主要指数卡" },
+        "heatmap": { "type": "MarketHeatmapItem[]", "source": "observed", "dynamic": true, "description": "指数热力图色块" },
+        "categories": { "type": "MarketCategory[]", "source": "observed", "dynamic": false, "description": "分类 Tab" },
+        "indexRows": { "type": "IndexRow[]", "source": "observed", "dynamic": true, "description": "指数行情列表" },
+        "lastUpdated": { "type": "string", "source": "observed", "dynamic": true, "description": "截图底部「数据更新成功 11-27 10:10:55」" }
+      }
+    },
+    "MarketIndexQuote": {
+      "description": "主要指数横滑卡条目。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "name": { "type": "string", "source": "observed", "dynamic": false, "description": "上证指数/深证成指/创业板指等" },
+        "changePercent": { "type": "string", "source": "observed", "dynamic": true, "description": "如「-0.07%」「+0.51%」，含符号" },
+        "lastPrice": { "type": "string", "source": "observed", "dynamic": true, "description": "如「3474.62」" },
+        "sparkline": { "type": "string|null", "source": "observed", "dynamic": true, "description": "迷你走势图形态（红/绿折线），数据未采集" }
+      }
+    },
+    "MarketHeatmapItem": {
+      "description": "指数热力图色块。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "name": { "type": "string", "source": "observed", "dynamic": false, "description": "如「金融科技」「云计算」" },
+        "changePercent": { "type": "string", "source": "observed", "dynamic": true, "description": "如「+4.45%」；uiautomator 读到「+4.42%」，存在截图与 dump 差异，取值以截图为准并备注" },
+        "direction": { "type": "string", "source": "observed", "dynamic": true, "description": "up/down，决定色阶" },
+        "colorLevel": { "type": "string|null", "source": "observed", "dynamic": true, "description": "strong/medium/light 色阶，取样见 design_tokens.json" }
+      }
+    },
+    "MarketCategory": {
+      "description": "指数分类 Tab。",
+      "source": "observed",
+      "dynamic": false,
+      "fields": {
+        "label": { "type": "string", "source": "observed", "dynamic": false, "description": "如「全部(83)」" },
+        "count": { "type": "number", "source": "observed", "dynamic": false, "description": "括号内数字，如 83" },
+        "selected": { "type": "boolean", "source": "observed", "dynamic": true, "description": "当前选中态" }
+      }
+    },
+    "IndexRow": {
+      "description": "指数行情列表行。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "name": { "type": "string", "source": "observed", "dynamic": false, "description": "如「金融科技」" },
+        "code": { "type": "string", "source": "observed", "dynamic": false, "description": "如「930986.CSI」" },
+        "valuationLabel": { "type": "string", "source": "observed", "dynamic": true, "description": "过低/偏低/适中/偏高" },
+        "changePercent": { "type": "string", "source": "observed", "dynamic": true, "description": "如「+4.45%」" },
+        "pe": { "type": "string", "source": "observed", "dynamic": true, "description": "PE 数值，如「35.42」" },
+        "pePercentile": { "type": "string", "source": "observed", "dynamic": true, "description": "PE 百分位，如「4.53%」" },
+        "pb": { "type": "string", "source": "observed", "dynamic": true, "description": "PB 数值，如「3.32」" },
+        "pbPercentile": { "type": "string", "source": "observed", "dynamic": true, "description": "PB 百分位，如「10.89%」" },
+        "roe": { "type": "string|null", "source": "observed", "dynamic": true, "description": "表头存在 ROE，具体值未在截图完整读取" }
+      }
+    },
+    "FundList": {
+      "description": "全部基金列表 P0007（WebView）。列表结构与真实字段未逐项取证，字段定义为 mock。",
+      "source": "mock",
+      "dynamic": true,
+      "fields": {
+        "pageId": { "type": "string", "source": "observed", "dynamic": false, "description": "固定值 P0007" },
+        "list": { "type": "FundItem[]", "source": "mock", "dynamic": true, "description": "基金条目列表，结构为推测" },
+        "hasMore": { "type": "boolean|null", "source": "mock", "dynamic": true, "description": "分页信息未取证" }
+      }
+    },
+    "FundItem": {
+      "description": "基金列表条目（mock 结构，禁止用于真实业务）。",
+      "source": "mock",
+      "dynamic": true,
+      "fields": {
+        "fundCode": { "type": "string", "source": "mock", "dynamic": false, "description": "6 位基金代码占位" },
+        "fundName": { "type": "string", "source": "mock", "dynamic": false, "description": "基金名称占位；真实名称仅在首页核心卡观察到一只" },
+        "netValue": { "type": "string", "source": "mock", "dynamic": true, "description": "单位净值占位" },
+        "changePercent": { "type": "string", "source": "mock", "dynamic": true, "description": "涨跌幅占位，涨红跌绿规则来自观察" },
+        "riskLevel": { "type": "string", "source": "mock", "dynamic": false, "description": "风险等级占位，色值未采集" }
+      }
+    },
+    "SearchResult": {
+      "description": "搜索结果页 P0021 结构，源于搜索入口已验证；结果项具体字段为 mock。",
+      "source": "mock",
+      "dynamic": true,
+      "fields": {
+        "pageId": { "type": "string", "source": "observed", "dynamic": false, "description": "固定值 P0021" },
+        "keyword": { "type": "string", "source": "observed", "dynamic": true, "description": "搜索词，截图/提示词观察值如「黄金」" },
+        "items": { "type": "SearchResultItem[]", "source": "mock", "dynamic": true, "description": "结果列表，结构为推测" }
+      }
+    },
+    "SearchResultItem": {
+      "description": "搜索结果条目（mock 结构）。",
+      "source": "mock",
+      "dynamic": true,
+      "fields": {
+        "type": { "type": "string", "source": "mock", "dynamic": false, "description": "fund/index/article 分类占位" },
+        "name": { "type": "string", "source": "mock", "dynamic": false, "description": "名称占位" },
+        "code": { "type": "string", "source": "mock", "dynamic": false, "description": "代码占位" },
+        "changePercent": { "type": "string", "source": "mock", "dynamic": true, "description": "涨跌幅占位" }
+      }
+    },
+    "UserAccount": {
+      "description": "用户账户 P0005 / P0004。未登录采集，真实账户数据不存在于本工程。",
+      "source": "observed",
+      "dynamic": true,
+      "fields": {
+        "loginState": { "type": "string", "source": "observed", "dynamic": true, "description": "截图状态为未登录「登录/注册」" },
+        "nickname": { "type": "string|null", "source": "observed", "dynamic": true, "description": "未登录时显示「登录/注册」，非真实昵称" },
+        "welcomeText": { "type": "string", "source": "observed", "dynamic": false, "description": "「欢迎来到华夏基金」" },
+        "totalAssets": { "type": "string", "source": "observed", "dynamic": true, "description": "截图中为脱敏占位「******」，非真实资产" },
+        "points": { "type": "string", "source": "observed", "dynamic": true, "description": "「我的积分」截图为脱敏占位「****」" },
+        "weeklyReport": { "type": "string", "source": "observed", "dynamic": true, "description": "「理财周报」截图为脱敏占位「****」" },
+        "accountId": { "type": "null", "source": "observed", "dynamic": true, "description": "未采集，固定 null；禁止编造" },
+        "identity": { "type": "null", "source": "observed", "dynamic": true, "description": "实名信息未采集，固定 null；禁止编造" },
+        "bankCards": { "type": "null", "source": "observed", "dynamic": true, "description": "银行卡需登录+实名，未采集，固定 null" },
+        "holdings": { "type": "null", "source": "observed", "dynamic": true, "description": "持仓需登录，未采集，固定 null" },
+        "transactions": { "type": "null", "source": "observed", "dynamic": true, "description": "交易记录需登录，未采集，固定 null" }
+      }
+    },
+    "AgreementText": {
+      "description": "协议文本 P0001/P0029/P0030。协议列表条目名称可观察，正文未逐字采集为结构化文本。",
+      "source": "observed",
+      "dynamic": false,
+      "fields": {
+        "pageId": { "type": "string", "source": "observed", "dynamic": false, "description": "P0001/P0029/P0030" },
+        "title": { "type": "string", "source": "observed", "dynamic": false, "description": "协议标题" },
+        "titleList": { "type": "string[]|null", "source": "observed", "dynamic": false, "description": "协议列表项标题；未逐项取证则为 null" },
+        "content": { "type": "string|null", "source": "mock", "dynamic": false, "description": "协议正文占位；**禁止编造真实法律条款**，开发时应使用真实协议文本" },
+        "version": { "type": "string|null", "source": "mock", "dynamic": false, "description": "版本号未采集" },
+        "effectiveDate": { "type": "string|null", "source": "mock", "dynamic": false, "description": "生效日期未采集" }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "P0029",
+  "name": "协议列表",
+  "module": "我的",
+  "level": 3,
+  "type": "原生 Activity",
+  "entry": "设置-相关协议 / 我的-相关协议",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P2",
+  "description": "协议列表面：电子交易服务协议、隐私权政策摘要、隐私权政策、第三方共享个人信息清单、个人信息收集清单、算法推荐服务说明、金融产品或服务条款等，每项点击进入 H5 协议详情。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0029_协议列表/screenshots/P0029_协议列表_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0029_协议列表/annotations/P0029_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0029_协议列表/screenshots/P0029_协议列表_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C006",
+    "C010"
+  ],
+  "source": "P0023/P0005",
+  "targets": [
+    "P0030"
+  ],
+  "interactions": [
+    "P0029-I001",
+    "P0029-I002",
+    "P0029-I003",
+    "P0029-I004",
+    "P0029-I005"
+  ]
+}

@@ -1,0 +1,588 @@
+{
+  "meta": {
+    "$comment": "华夏基金管家 App v7.0.2 视觉设计 token。基准 1080x2400px、420dpi；dp = px / 2.625。所有值均为截图取证或估算，非官方设计稿。禁止将 estimated/unverified 值当作精确还原依据。",
+    "schemaVersion": "1.0",
+    "generatedAt": "2026-11-27",
+    "app": {
+      "package": "com.chinaamc.MainActivityAMC",
+      "version": "7.0.2"
+    },
+    "viewport": {
+      "widthPx": 1080,
+      "heightPx": 2400,
+      "densityDpi": 420,
+      "pxPerDp": 2.625
+    },
+    "sourceLegend": {
+      "measured": "来自 adb wm size/density 或 uiautomator dump 的 bounds，可直接复现",
+      "sampled": "从原始 PNG 指定区域做像素采样（中位数/众数/极值），可复现，见 DESIGN_SYSTEM.md 附录 A",
+      "observed": "截图视觉定性观察，非精确数值",
+      "estimated": "由 bounds 反推或与常见 Android 常量比对推算，未直接测量",
+      "unverified": "未采集/被登录或安全边界阻断/无可信样本，需人工核对"
+    },
+    "unitLegend": {
+      "px": "1080x2400 原图上的原始物理像素",
+      "dp": "系统逻辑尺寸，等于 px / 2.625",
+      "sp": "字号单位，本机 1sp 约等于 2.625px（受字体缩放影响，属估算）",
+      "hex": "sRGB 十六进制颜色",
+      "weight": "字体字重数值",
+      "family": "字体族名称",
+      "ratio": "0-1 的比率值",
+      "none": "无单位或定性描述"
+    }
+  },
+  "colors": {
+    "brand": {
+      "primaryDeep": {
+        "value": "#B11214",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页顶部 Banner 深红端区域极值采样；同区另点 #AE1113/#A71718，深红端约 #A7~B1/11~17/13~18。非官方品牌色。"
+      },
+      "primaryVivid": {
+        "value": "#E31B23",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "UI 强调红代表值：底部导航选中态 #DF1F26、买基金描边 #EC1B1D、红色标签 #EE3F33 的中位。"
+      },
+      "primaryWarm": {
+        "value": "#CD7172",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "Banner 红底叠加白字/光效后的浅端众数，属渐变混合色，不可单独作为品牌主色。"
+      },
+      "gradientDirection": {
+        "value": "左右/斜向渐变，角度未测",
+        "unit": "none",
+        "source": "observed",
+        "note": "首页 Banner 与会员卡横幅可见渐变；起止色见 primaryDeep 与 primaryVivid。"
+      }
+    },
+    "accent": {
+      "gold": {
+        "value": "#D9B26A",
+        "unit": "hex",
+        "source": "estimated",
+        "note": "Banner 金币与 VIP 装饰目视金色；高光过曝未做可信采样，需人工核对。"
+      },
+      "pink": {
+        "value": "#FABFBB",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页「资金散落多平台」推荐卡背景众数 #FABFBB、中位 #FAC3C0。"
+      },
+      "pinkLight": {
+        "value": "#FFE6E6",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页「红利因子」子卡浅粉底众数。"
+      },
+      "avatar": {
+        "value": "#FDEAEB",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「我的」页未登录头像圆形浅粉底中位。"
+      },
+      "memberCard": {
+        "value": "#262626",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「我的」页会员黑金卡底色中位。"
+      }
+    },
+    "background": {
+      "pageHome": {
+        "value": "#F8F8F8",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页内容区间隙中位。"
+      },
+      "pageMine": {
+        "value": "#F6F7F8",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「我的」页分组间隙中位。"
+      },
+      "surface": {
+        "value": "#FFFFFF",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "卡片表面与底部导航底色众数。"
+      },
+      "searchComposite": {
+        "value": "#D47777",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页搜索框半透明白覆盖在红色 Banner 上的合成色；实现应使用半透明白而非固定 hex。"
+      },
+      "pillActive": {
+        "value": "#FEEEEF",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "指数行情分类 Tab 选中态底中位。"
+      },
+      "pillInactive": {
+        "value": "#F6F6F6",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "指数行情分类 Tab 未选中底中位。"
+      }
+    },
+    "text": {
+      "primary": {
+        "value": "#16171C",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "栏目标题最暗采样；指数列表标题极值 #000000。"
+      },
+      "secondary": {
+        "value": "#666666",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「我的」页欢迎语最暗采样。"
+      },
+      "tertiary": {
+        "value": "#B6BCC2",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页底部风险提示小字最暗采样。"
+      },
+      "navInactive": {
+        "value": "#7A7D82",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "底部导航未选中文字最暗采样。"
+      },
+      "onBrand": {
+        "value": "#FFFFFF",
+        "unit": "hex",
+        "source": "observed",
+        "note": "Banner 上主标题目视白色；强调红按钮上文字目视近白（约 #FBE9E9，估算），未精确采样。"
+      }
+    },
+    "semantic": {
+      "marketUp": {
+        "value": "#EE3F33",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "涨幅文字极值 #EE3F33/#EF4034 代表值，中国市场涨红。"
+      },
+      "marketDown": {
+        "value": "#24AB27",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "跌幅文字与点位极值，中国市场跌绿。"
+      },
+      "marketFlat": {
+        "value": "#8A8F99",
+        "unit": "hex",
+        "source": "estimated",
+        "note": "未观察到平盘样本，按中性灰估算，需人工核对。"
+      },
+      "heatStrong": {
+        "value": "#BD0100",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "热力图涨幅最高块中位与众数。"
+      },
+      "heatMedium": {
+        "value": "#E21515",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "热力图次高块采样。"
+      },
+      "heatLight": {
+        "value": "#ED4141",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "热力图浅红块中位与众数。"
+      },
+      "downSurface": {
+        "value": "#F1FBF1",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "下跌指数卡片浅绿底中位。"
+      },
+      "valuationLowSurface": {
+        "value": "#E8F4E8",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "指数列表「过低/偏低」估值标签底中位。"
+      },
+      "riskWarningSurface": {
+        "value": "#FCFDFD",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "首页卡片底部免责声明区域底色。"
+      }
+    },
+    "risk": {
+      "low": {
+        "value": "#E8F4E8",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "估值「过低」标签底已采样；用作低风险色属推测。"
+      },
+      "medium": {
+        "value": null,
+        "unit": "hex",
+        "source": "unverified",
+        "note": "首页基金卡标注「中高风险」但未见独立风险色块，未采集到可信色值。"
+      },
+      "high": {
+        "value": null,
+        "unit": "hex",
+        "source": "unverified",
+        "note": "「偏高」估值标签目视浅红/浅橙系，未采样，需人工核对。"
+      }
+    },
+    "border": {
+      "divider": {
+        "value": "#F6F7F8",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「我的」页分割线区域采样。"
+      },
+      "button": {
+        "value": "#EC1B1D",
+        "unit": "hex",
+        "source": "sampled",
+        "note": "「买基金」描边按钮极值采样。"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "value": "系统默认无衬线（Roboto / Noto Sans CJK）",
+      "unit": "family",
+      "source": "estimated",
+      "note": "未做 APK 字体资源解析，未读取 Typeface，需人工核对。"
+    },
+    "weights": {
+      "light": {
+        "value": 300,
+        "unit": "weight",
+        "source": "estimated",
+        "note": "辅助文字目视偏细，字重数值未测。"
+      },
+      "regular": {
+        "value": 400,
+        "unit": "weight",
+        "source": "estimated",
+        "note": "正文目视常规。"
+      },
+      "medium": {
+        "value": 500,
+        "unit": "weight",
+        "source": "estimated",
+        "note": "数字与点位目视偏粗，字重数值未测。"
+      },
+      "bold": {
+        "value": 700,
+        "unit": "weight",
+        "source": "estimated",
+        "note": "栏目标题与 Banner 主标题目视粗体。"
+      }
+    },
+    "scale": {
+      "pageTitle": {
+        "value": 18,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：登录/注册 bounds 高 57px（[222,207][1048,264]），约 47px 物理字高。sp 为估算。"
+      },
+      "sectionTitle": {
+        "value": 16,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：核心配置 bounds 高 57px（[64,1346][232,1403]），约 42px 物理字高。"
+      },
+      "body": {
+        "value": 16,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：金融科技 bounds 高 58px（[31,1286][351,1344]）；点位 3474.62 高 47px。"
+      },
+      "bodySecondary": {
+        "value": 14,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：欢迎来到华夏基金 bounds 高 43px（[222,285][478,328]）。"
+      },
+      "caption": {
+        "value": 12,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：930986.CSI 高 42px、过低标签高 53px、底部导航文字高 36px。"
+      },
+      "footnote": {
+        "value": 10,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：风险提示小字高 38px（[64,2145][1016,2183]），估算 10-11sp。"
+      },
+      "badge": {
+        "value": 10,
+        "unit": "sp",
+        "source": "estimated",
+        "note": "样本：Hot 高 39px（[544,678][629,717]）、NEW 高 34px。"
+      }
+    },
+    "lineHeight": {
+      "listItem": {
+        "value": 148,
+        "unit": "px",
+        "source": "measured",
+        "note": "「我的」页功能列表相邻项行距 148px = 56.4dp（意见反馈 bottom 1589 / 常见问题 top 1590）。"
+      },
+      "marketListItem": {
+        "value": 152,
+        "unit": "px",
+        "source": "measured",
+        "note": "指数行情列表相邻项行距 152px = 57.9dp（金融科技 top 1286 / 云计算 top 1438）。"
+      },
+      "sectionTitle": {
+        "value": 57,
+        "unit": "px",
+        "source": "measured",
+        "note": "栏目标题 bounds 高 57px = 21.7dp，不等于字形高。"
+      },
+      "multiplier": {
+        "value": 1.35,
+        "unit": "ratio",
+        "source": "estimated",
+        "note": "由列表行距与估算字号比反推，约 1.3-1.4，未直接测量。"
+      }
+    }
+  },
+  "spacing": {
+    "contentGutterPx": {
+      "value": 32,
+      "unit": "px",
+      "source": "measured",
+      "note": "常规内容左右边距；多处 bounds left=32/right=1048。"
+    },
+    "contentGutterDp": {
+      "value": 12.19,
+      "unit": "dp",
+      "source": "measured",
+      "note": "32px / 2.625 的换算值。"
+    },
+    "cardInnerInsetPx": {
+      "value": 32,
+      "unit": "px",
+      "source": "measured",
+      "note": "卡片相对内容区再内缩 32px：核心配置标题 left=64，父容器 left=32。"
+    },
+    "cardTopInsetPx": {
+      "value": 24,
+      "unit": "px",
+      "source": "estimated",
+      "note": "容器 top 1322 与标题 bounds top 1346 之差；标题 bounds 非视觉框，故为估算。"
+    },
+    "blockGapPx": {
+      "value": 32,
+      "unit": "px",
+      "source": "measured",
+      "note": "快捷入口区 bottom 906 与推荐 Banner top 938 之差；模块间常规间距。"
+    },
+    "sectionGapPx": {
+      "value": 53,
+      "unit": "px",
+      "source": "measured",
+      "note": "指数热力图 bottom 1002 与分类 Tab top 1055 之差，约 20dp 档。"
+    },
+    "statusBarHeightPx": {
+      "value": 65,
+      "unit": "px",
+      "source": "measured",
+      "note": "截图观察 + ENVIRONMENT.md 记录，0-65px。"
+    },
+    "bottomNavHeightPx": {
+      "value": 131,
+      "unit": "px",
+      "source": "measured",
+      "note": "底部导航 bbl bounds [0,2206][1080,2337] 高 131px = 49.9dp。"
+    },
+    "gestureBarHeightPx": {
+      "value": 63,
+      "unit": "px",
+      "source": "measured",
+      "note": "navigationBarBackground bounds [0,2337][1080,2400] 高 63px = 24dp。"
+    }
+  },
+  "radius": {
+    "searchPill": {
+      "value": 42,
+      "unit": "px",
+      "source": "estimated",
+      "note": "搜索框高 84px 的胶囊形，按高度一半估算 = 16dp；uiautomator 未暴露圆角。"
+    },
+    "contentCard": {
+      "value": 20,
+      "unit": "px",
+      "source": "estimated",
+      "note": "首页推荐卡/核心卡目视圆角，范围约 16-24px = 6-9dp。"
+    },
+    "tabPill": {
+      "value": 27,
+      "unit": "px",
+      "source": "estimated",
+      "note": "分类 Tab 高 55px 的胶囊形，按高度一半估算 = 10dp。"
+    },
+    "bottomNavTop": {
+      "value": 0,
+      "unit": "px",
+      "source": "observed",
+      "note": "底部导航上方未见明显大圆角。"
+    }
+  },
+  "border": {
+    "dividerWidthPx": {
+      "value": 2,
+      "unit": "px",
+      "source": "measured",
+      "note": "mv_line1 bounds [32,755][1048,757] 高 2px = 0.76dp。"
+    },
+    "outlineButtonWidthPx": {
+      "value": 2,
+      "unit": "px",
+      "source": "estimated",
+      "note": "「买基金」红色描边按钮目视约 2px，未直接测量。"
+    }
+  },
+  "shadow": {
+    "card": {
+      "value": "轻微投影，位移与模糊半径未测",
+      "unit": "none",
+      "source": "observed",
+      "note": "卡片可见轻微阴影；禁止编造精确 shadow 数值，实现时与截图比对。"
+    }
+  },
+  "opacity": {
+    "searchOverlay": {
+      "value": 0.6,
+      "unit": "ratio",
+      "source": "estimated",
+      "note": "搜索框半透明白覆盖红色 Banner 的合成色 #D47777；原始 alpha 未测，0.6 仅为起始参考。"
+    },
+    "bannerTextOverlay": {
+      "value": null,
+      "unit": "ratio",
+      "source": "unverified",
+      "note": "Banner 文字与光效叠加透明度未测。"
+    }
+  },
+  "sizes": {
+    "navigation": {
+      "statusBarHeightPx": {
+        "value": 65,
+        "unit": "px",
+        "source": "measured",
+        "note": "顶部安全区。"
+      },
+      "titleBarHomeHeightPx": {
+        "value": 267,
+        "unit": "px",
+        "source": "measured",
+        "note": "首页 cl_title_bar bounds [0,0][1080,267]。"
+      },
+      "searchBoxHeightPx": {
+        "value": 84,
+        "unit": "px",
+        "source": "measured",
+        "note": "ll_search bounds [32,152][1048,236] 高 84px = 32dp。"
+      },
+      "titleBarMineHeightPx": {
+        "value": 108,
+        "unit": "px",
+        "source": "measured",
+        "note": "我的页 mll_topBars bounds [0,136][1080,244] 高 108px。"
+      },
+      "bottomNavHeightPx": {
+        "value": 131,
+        "unit": "px",
+        "source": "measured",
+        "note": "bbl bounds [0,2206][1080,2337] 高 131px。"
+      },
+      "gestureBarHeightPx": {
+        "value": 63,
+        "unit": "px",
+        "source": "measured",
+        "note": "系统手势条区 2337-2400px。"
+      }
+    },
+    "icon": {
+      "bottomNavPx": {
+        "value": 50,
+        "unit": "px",
+        "source": "measured",
+        "note": "底部导航图标 bounds [83,2224][133,2274] = 50x50px = 19.05dp。"
+      },
+      "quickEntryPx": {
+        "value": 95,
+        "unit": "px",
+        "source": "measured",
+        "note": "首页快捷入口图标 bounds [86,706][181,801] = 95x95px = 36.2dp。"
+      },
+      "topBarActionPx": {
+        "value": 79,
+        "unit": "px",
+        "source": "measured",
+        "note": "我的页设置/客服/消息图标 bounds 宽高 79px = 30.1dp。"
+      },
+      "searchPx": {
+        "value": 34,
+        "unit": "px",
+        "source": "measured",
+        "note": "搜索框内图标 bounds [64,177][98,211] = 34x34px = 13dp。"
+      }
+    },
+    "card": {
+      "coreBannerWidthPx": {
+        "value": 952,
+        "unit": "px",
+        "source": "measured",
+        "note": "core_banner bounds [64,1427][1016,2183] 宽 952px = 362.7dp。"
+      },
+      "coreBannerHeightPx": {
+        "value": 756,
+        "unit": "px",
+        "source": "measured",
+        "note": "core_banner 高 756px = 288dp。"
+      },
+      "bannerHeightPx": {
+        "value": 633,
+        "unit": "px",
+        "source": "measured",
+        "note": "首页 ViewPager banner bounds [0,0][1080,633] 高 633px = 241.1dp。"
+      },
+      "quickEntryAreaHeightPx": {
+        "value": 242,
+        "unit": "px",
+        "source": "measured",
+        "note": "include_areas bounds [32,664][1048,906] 高 242px = 92.2dp。"
+      },
+      "hoverMenuWidthPx": {
+        "value": 73,
+        "unit": "px",
+        "source": "measured",
+        "note": "财富广场悬浮入口 bounds [1007,1571][1080,1812] 宽 73px = 27.8dp。"
+      },
+      "hoverMenuHeightPx": {
+        "value": 241,
+        "unit": "px",
+        "source": "measured",
+        "note": "财富广场悬浮入口高 241px = 91.8dp；交互未验证。"
+      }
+    }
+  },
+  "unresolved": [
+    "官方品牌主色 hex（截图为渐变与合成色，采样值仅为近似）",
+    "字体家族、字重数值、sp 字号与行高倍数（uiautomator bounds 不含字体属性）",
+    "圆角半径、阴影位移/模糊、渐变角度、透明度 alpha（绘制属性未暴露）",
+    "金色辅助色、平盘色、中/高风险等级色（无可信样本）",
+    "卡片底部内边距、键盘弹起时输入区位移量",
+    "登录后的资产、持仓、交易记录视觉（按安全边界未采集，禁止虚构）"
+  ]
+}

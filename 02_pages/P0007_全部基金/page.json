@@ -1,0 +1,46 @@
+{
+  "id": "P0007",
+  "name": "全部基金",
+  "module": "基金",
+  "level": 2,
+  "type": "WebView (H5)",
+  "entry": "首页快捷入口-全部基金",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "基金列表 H5：顶部分类 Tab（全部基金/股票型/混合型/指数型/债券型/货币型等）、标签芯片（QDII全球基金/历史绩优纯债等）、筛选入口、排序表头（基金名称/最新净值/涨跌幅/夏普比率/最大回撤）、基金列表、时间区间切换（近6月/今年以来/近1年/近3年/近5年）。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0007_全部基金/screenshots/P0007_全部基金_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0007_全部基金/annotations/P0007_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0007_全部基金/screenshots/P0007_全部基金_default_001.xml"
+    ]
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C003",
+    "C006",
+    "C007",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0007-I001",
+    "P0007-I002",
+    "P0007-I003",
+    "P0007-I004",
+    "P0007-I005"
+  ]
+}

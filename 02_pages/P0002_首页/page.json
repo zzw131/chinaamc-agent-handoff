@@ -1,0 +1,74 @@
+{
+  "id": "P0002",
+  "name": "首页",
+  "module": "首页",
+  "level": 1,
+  "type": "原生 Fragment",
+  "entry": "底部导航-首页 / 协议同意后默认进入",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "首页含顶部搜索框、轮播 Banner、5 个快捷入口、核心配置/主题配置/追求稳健/热点行业等内容卡片，长页面可滚动，右侧悬浮财富广场。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0002_首页/screenshots/P0002_首页_banner状态2_001.png",
+      "02_pages/P0002_首页/screenshots/P0002_首页_default_001.png",
+      "02_pages/P0002_首页/screenshots/P0002_首页_default_002.png",
+      "02_pages/P0002_首页/screenshots/P0002_首页_scroll_001.png",
+      "02_pages/P0002_首页/screenshots/P0002_首页_scroll_002.png",
+      "02_pages/P0002_首页/screenshots/P0002_首页_scroll_003.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0002_首页/annotations/P0002_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0002_首页/screenshots/P0002_首页_default_001.xml",
+      "02_pages/P0002_首页/screenshots/P0002_首页_scroll_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "banner_variant",
+    "scroll_1",
+    "scroll_2",
+    "scroll_3"
+  ],
+  "components": [
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C010"
+  ],
+  "source": "P0001",
+  "targets": [
+    "P0003",
+    "P0004",
+    "P0007",
+    "P0011",
+    "P0012",
+    "P0013",
+    "P0020",
+    "P0022",
+    "P0037"
+  ],
+  "interactions": [
+    "P0002-I001",
+    "P0002-I002",
+    "P0002-I003",
+    "P0002-I004",
+    "P0002-I005",
+    "P0002-I006",
+    "P0002-I007",
+    "P0002-I008",
+    "P0002-I009",
+    "P0002-I010",
+    "P0002-I011",
+    "P0002-I012",
+    "P0002-I013"
+  ]
+}

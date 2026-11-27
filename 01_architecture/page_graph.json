@@ -1,0 +1,297 @@
+{
+  "nodes": [
+    {
+      "id": "P0001",
+      "name": "启动与隐私协议",
+      "module": "公共",
+      "level": 0
+    },
+    {
+      "id": "P0002",
+      "name": "首页",
+      "module": "首页",
+      "level": 1
+    },
+    {
+      "id": "P0003",
+      "name": "指数行情",
+      "module": "行情",
+      "level": 1
+    },
+    {
+      "id": "P0004",
+      "name": "登录",
+      "module": "账户",
+      "level": 1
+    },
+    {
+      "id": "P0005",
+      "name": "我的",
+      "module": "我的",
+      "level": 1
+    },
+    {
+      "id": "P0007",
+      "name": "全部基金",
+      "module": "基金",
+      "level": 2
+    },
+    {
+      "id": "P0011",
+      "name": "会员中心",
+      "module": "会员",
+      "level": 2
+    },
+    {
+      "id": "P0012",
+      "name": "目标投",
+      "module": "活动",
+      "level": 2
+    },
+    {
+      "id": "P0013",
+      "name": "养老专区",
+      "module": "养老",
+      "level": 2
+    },
+    {
+      "id": "P0020",
+      "name": "搜索",
+      "module": "搜索",
+      "level": 2
+    },
+    {
+      "id": "P0021",
+      "name": "搜索结果",
+      "module": "搜索",
+      "level": 3
+    },
+    {
+      "id": "P0022",
+      "name": "指数详情",
+      "module": "行情",
+      "level": 3
+    },
+    {
+      "id": "P0023",
+      "name": "设置",
+      "module": "我的",
+      "level": 2
+    },
+    {
+      "id": "P0024",
+      "name": "关于华夏基金管家",
+      "module": "我的",
+      "level": 3
+    },
+    {
+      "id": "P0029",
+      "name": "协议列表",
+      "module": "我的",
+      "level": 3
+    },
+    {
+      "id": "P0030",
+      "name": "协议详情H5",
+      "module": "公共",
+      "level": 4
+    },
+    {
+      "id": "P0031",
+      "name": "长辈模式",
+      "module": "我的",
+      "level": 3
+    },
+    {
+      "id": "P0032",
+      "name": "推送设置",
+      "module": "我的",
+      "level": 3
+    },
+    {
+      "id": "P0033",
+      "name": "注册",
+      "module": "账户",
+      "level": 2
+    },
+    {
+      "id": "P0035",
+      "name": "找回密码",
+      "module": "账户",
+      "level": 2
+    },
+    {
+      "id": "P0037",
+      "name": "稳健理财H5",
+      "module": "活动",
+      "level": 2
+    }
+  ],
+  "edges": [
+    {
+      "from_": "P0001",
+      "to": "P0002",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0003",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0007",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0011",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0012",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0013",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0020",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0022",
+      "via": null
+    },
+    {
+      "from_": "P0002",
+      "to": "P0037",
+      "via": null
+    },
+    {
+      "from_": "P0003",
+      "to": "P0020",
+      "via": null
+    },
+    {
+      "from_": "P0003",
+      "to": "P0022",
+      "via": null
+    },
+    {
+      "from_": "P0004",
+      "to": "P0033",
+      "via": null
+    },
+    {
+      "from_": "P0004",
+      "to": "P0035",
+      "via": null
+    },
+    {
+      "from_": "P0005",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0005",
+      "to": "P0011",
+      "via": null
+    },
+    {
+      "from_": "P0005",
+      "to": "P0023",
+      "via": null
+    },
+    {
+      "from_": "P0005",
+      "to": "P0029",
+      "via": null
+    },
+    {
+      "from_": "P0007",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0011",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0012",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0013",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0020",
+      "to": "P0021",
+      "via": null
+    },
+    {
+      "from_": "P0021",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0021",
+      "to": "P0022",
+      "via": null
+    },
+    {
+      "from_": "P0022",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0023",
+      "to": "P0024",
+      "via": null
+    },
+    {
+      "from_": "P0023",
+      "to": "P0029",
+      "via": null
+    },
+    {
+      "from_": "P0023",
+      "to": "P0031",
+      "via": null
+    },
+    {
+      "from_": "P0023",
+      "to": "P0032",
+      "via": null
+    },
+    {
+      "from_": "P0029",
+      "to": "P0030",
+      "via": null
+    },
+    {
+      "from_": "P0033",
+      "to": "P0004",
+      "via": null
+    },
+    {
+      "from_": "P0037",
+      "to": "P0004",
+      "via": null
+    }
+  ]
+}

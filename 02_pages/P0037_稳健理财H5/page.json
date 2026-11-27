@@ -1,0 +1,43 @@
+{
+  "id": "P0037",
+  "name": "稳健理财H5",
+  "module": "活动",
+  "level": 2,
+  "type": "WebView (CommonWebActivity)",
+  "entry": "首页顶部 Banner 点击",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P1",
+  "description": "稳健理财活动 H5（追求稳健专区）：Banner 图、基金产品卡片（华夏鼎茂债券A，近1年涨跌幅 +3.98%）、业绩比较基准与风险提示长文，可滚动。Banner 实际跳转目标为稳健理财活动页（非会员中心）。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0037_稳健理财H5/screenshots/P0037_稳健理财_default_001.png",
+      "02_pages/P0037_稳健理财H5/screenshots/P0037_稳健理财_scroll_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0037_稳健理财H5/annotations/P0037_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0037_稳健理财H5/screenshots/P0037_稳健理财_default_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "scroll"
+  ],
+  "components": [
+    "C005",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0037-I001",
+    "P0037-I002"
+  ]
+}

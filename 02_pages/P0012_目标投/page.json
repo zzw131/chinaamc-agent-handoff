@@ -1,0 +1,38 @@
+{
+  "id": "P0012",
+  "name": "目标投",
+  "module": "活动",
+  "level": 2,
+  "type": "WebView (H5活动)",
+  "entry": "首页快捷入口-目标投",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P1",
+  "description": "目标投第19期 H5 活动页：目标止盈收益率 5%至9%、本期推荐指数中证2000、点击开启目标投、起投时间、指数亮点等。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0012_目标投/screenshots/P0012_目标投_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0012_目标投/annotations/P0012_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": []
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C005",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0012-I001"
+  ]
+}

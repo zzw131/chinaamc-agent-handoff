@@ -1,0 +1,40 @@
+{
+  "id": "P0013",
+  "name": "养老专区",
+  "module": "养老",
+  "level": 2,
+  "type": "WebView (H5)",
+  "entry": "首页快捷入口-养老专区",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P1",
+  "description": "养老专区 H5：个人养老金个税优惠计算器（税前年收入输入、减免税费约计算）、个人养老金全流程操作指南、开启个人养老金投资计划。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0013_养老专区/screenshots/P0013_养老专区_default_001.png"
+    ],
+    "states": [],
+    "annotations": [
+      "02_pages/P0013_养老专区/annotations/P0013_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": []
+  },
+  "states": [
+    "default"
+  ],
+  "components": [
+    "C005",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0004"
+  ],
+  "interactions": [
+    "P0013-I001",
+    "P0013-I002",
+    "P0013-I003"
+  ]
+}

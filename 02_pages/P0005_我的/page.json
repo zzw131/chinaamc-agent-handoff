@@ -1,0 +1,54 @@
+{
+  "id": "P0005",
+  "name": "我的",
+  "module": "我的",
+  "level": 1,
+  "type": "原生 Fragment",
+  "entry": "底部导航-我的",
+  "login_required": false,
+  "status": "captured",
+  "priority": "P0",
+  "description": "个人中心未登录态：登录/注册入口、会员横幅、总资产（脱敏 ******）、买基金、交易记录/银行卡/定投管理、我的积分/理财周报、常用功能（月度账单/资产归集/会员中心/高端理财认证/定期转换）、意见反馈/常见问题/投顾解约/相关协议。",
+  "spec": "PAGE_SPEC.md",
+  "files": {
+    "screenshots": [
+      "02_pages/P0005_我的/screenshots/P0005_我的_default_001.png"
+    ],
+    "states": [
+      "02_pages/P0005_我的/states/P0005_我的_expanded_001.png"
+    ],
+    "annotations": [
+      "02_pages/P0005_我的/annotations/P0005_交互标注_default_001.png"
+    ],
+    "recordings": [],
+    "xml": [
+      "02_pages/P0005_我的/screenshots/P0005_我的_default_001.xml"
+    ]
+  },
+  "states": [
+    "default",
+    "expanded"
+  ],
+  "components": [
+    "C001",
+    "C008",
+    "C010"
+  ],
+  "source": "P0002",
+  "targets": [
+    "P0004",
+    "P0011",
+    "P0023",
+    "P0029"
+  ],
+  "interactions": [
+    "P0005-I001",
+    "P0005-I002",
+    "P0005-I003",
+    "P0005-I004",
+    "P0005-I005",
+    "P0005-I006",
+    "P0005-I007",
+    "P0005-I008"
+  ]
+}
