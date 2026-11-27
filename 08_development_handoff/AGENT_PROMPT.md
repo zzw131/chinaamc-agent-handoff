@@ -3,6 +3,10 @@
 > 用法：把下面代码块整体复制给接手开发的 Agent，并将 `[任务描述]` 替换为具体任务。
 > 模板已包含资料读取路径、约束与验收方式，Agent 无需再自行摸索目录结构。
 
+## 当前项目重新还原
+
+新版首页与「管家」请直接复制 [最新版还原提示词](../design/guanjia/AI-STUDIO-PROMPT.md)，并让开发 Agent 读取 [管家画板清单](../design/guanjia/design-manifest.json) 与对应 PNG。以下模板用于实机采集资料范围。
+
 ## 模板正文
 
 ```text

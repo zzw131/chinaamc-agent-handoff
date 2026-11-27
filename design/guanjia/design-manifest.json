@@ -1,0 +1,622 @@
+{
+  "project": "华夏基金 App · 管家",
+  "design_date": "2026-11-27",
+  "figma_source": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=862-866",
+  "figma_organized": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8505-164",
+  "mindmap": {
+    "file": "references/mind-map.png",
+    "figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8506-2087"
+  },
+  "provenance": "Figma Design 原尺寸 1x PNG，按单张原稿画板导出",
+  "groups": [
+    {
+      "id": "home-and-follow",
+      "label": "首页与关注",
+      "frames": [
+        {
+          "id": "P0002-home",
+          "label": "首页 / 首页长页",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1451-139",
+          "file": "references/screens/home-and-follow/P0002-home.png",
+          "size_px": [
+            750,
+            3540
+          ],
+          "sha256": "685e210ec96bc1a37690537d0f2939bf828b414b9d526978faf4becf619da0aa",
+          "organized_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=8507-2536",
+          "benchmark_id": "P0002",
+          "image_crops": {
+            "campaign_banner": {
+              "file": "assets/home/campaign-banner.png",
+              "box_px": [
+                24,
+                524,
+                726,
+                755
+              ]
+            },
+            "footer_brand": {
+              "file": "assets/home/footer-brand.png",
+              "box_px": [
+                274,
+                3072,
+                476,
+                3140
+              ]
+            }
+          },
+          "detail_crops": [
+            {
+              "file": "references/detail/P0002-home/01-top.png",
+              "y_px": [
+                0,
+                1630
+              ]
+            },
+            {
+              "file": "references/detail/P0002-home/02-theme.png",
+              "y_px": [
+                1620,
+                2446
+              ]
+            },
+            {
+              "file": "references/detail/P0002-home/03-bottom.png",
+              "y_px": [
+                2435,
+                3540
+              ]
+            }
+          ]
+        },
+        {
+          "id": "theme-allocation",
+          "label": "首页 / 主题配置",
+          "kind": "reference",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=5547-693",
+          "file": "references/screens/home-and-follow/theme-allocation.png",
+          "size_px": [
+            750,
+            5199
+          ],
+          "sha256": "64a9b431d5d0a74ccd53b68e04a3fbaa094b981d3151cc6f6c44229dd3a49c3d",
+          "note": "主题配置的多个内容示例，归入首页模块",
+          "detail_crops": [
+            {
+              "file": "references/detail/theme-allocation/01.png",
+              "y_px": [
+                0,
+                1640
+              ]
+            },
+            {
+              "file": "references/detail/theme-allocation/02.png",
+              "y_px": [
+                1540,
+                3180
+              ]
+            },
+            {
+              "file": "references/detail/theme-allocation/03.png",
+              "y_px": [
+                3080,
+                4720
+              ]
+            },
+            {
+              "file": "references/detail/theme-allocation/04.png",
+              "y_px": [
+                4620,
+                5199
+              ]
+            }
+          ]
+        },
+        {
+          "id": "follow-home",
+          "label": "关注 / 关注首页",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1061-1325",
+          "file": "references/screens/home-and-follow/follow-home.png",
+          "size_px": [
+            750,
+            3318
+          ],
+          "sha256": "8863722a14fbf469ac076d874d4d4b50be7ec0bcfb3567b05fe3a6aa28fef0aa",
+          "detail_crops": [
+            {
+              "file": "references/detail/follow-home/01.png",
+              "y_px": [
+                0,
+                1640
+              ]
+            },
+            {
+              "file": "references/detail/follow-home/02.png",
+              "y_px": [
+                1540,
+                3180
+              ]
+            },
+            {
+              "file": "references/detail/follow-home/03.png",
+              "y_px": [
+                3080,
+                3318
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manager-qa",
+      "label": "基金经理问答",
+      "frames": [
+        {
+          "id": "manager-dialogue",
+          "label": "基金经理问答 / 对话基金经理",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1269-230",
+          "file": "references/screens/manager-qa/manager-dialogue.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "13fcbac9ea298504e241a19a3cee5542ad8734a0dec96dccb166717c45cb1f85"
+        },
+        {
+          "id": "ask-empty",
+          "label": "基金经理问答 / 提问空白",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1250-1482",
+          "file": "references/screens/manager-qa/ask-empty.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "481583a5b1ca8bdb738f36fcc156adb9277b6576a0ba9e4621f0bc9cc9b9b905",
+          "note": "空输入、发布按钮禁用、键盘示意"
+        },
+        {
+          "id": "ask-targeted",
+          "label": "基金经理问答 / 定向提问",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1258-1592",
+          "file": "references/screens/manager-qa/ask-targeted.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "a4fce7683aaf5f3d7f8b9fd6ec1e33f75bd8435825f05d9e5865a71a3a505ae4",
+          "note": "已输入内容、发布可用、键盘示意"
+        },
+        {
+          "id": "ask-success",
+          "label": "基金经理问答 / 提交成功",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1258-1632",
+          "file": "references/screens/manager-qa/ask-success.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "df95753cff0707b45fb35c60eaa81911712e34cb6c2ca67daa60be0c8aaafb25"
+        },
+        {
+          "id": "answer-detail",
+          "label": "基金经理问答 / 问答详情",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1071-1580",
+          "file": "references/screens/manager-qa/answer-detail.png",
+          "size_px": [
+            750,
+            3464
+          ],
+          "sha256": "81eb758ccd16fb3632db2eebdf88bd8b76b4d78b07eead01230f847d8ea2776a",
+          "detail_crops": [
+            {
+              "file": "references/detail/answer-detail/01.png",
+              "y_px": [
+                0,
+                1640
+              ]
+            },
+            {
+              "file": "references/detail/answer-detail/02.png",
+              "y_px": [
+                1540,
+                3180
+              ]
+            },
+            {
+              "file": "references/detail/answer-detail/03.png",
+              "y_px": [
+                3080,
+                3464
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "message-center",
+      "label": "消息中心",
+      "frames": [
+        {
+          "id": "manager-reply",
+          "label": "消息中心 / 基金经理回复",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1258-1681",
+          "file": "references/screens/message-center/manager-reply.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "d8247e6f612c18a0cc10a87a96599c02413a7764c119b41d23bc071bfad60ac2"
+        },
+        {
+          "id": "reply-notice",
+          "label": "消息中心 / 回复提示",
+          "kind": "reference",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1265-1725",
+          "file": "references/screens/message-center/reply-notice.png",
+          "size_px": [
+            750,
+            1658
+          ],
+          "sha256": "34c693c2724f2c9bc2a3ea905e4001cdbd82a4226f31871ed70f1713fd224080",
+          "note": "参考稿含页内说明和较早的红色标题栏"
+        }
+      ]
+    },
+    {
+      "id": "reminders",
+      "label": "管家提醒",
+      "frames": [
+        {
+          "id": "new-with-history-collapsed",
+          "label": "管家提醒 / 有新消息 · 历史可展开",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1333-533",
+          "file": "references/screens/reminders/new-with-history-collapsed.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "7889134ab122ee8bd90bc7076da91f4caca177496a170803b57dadb99dbf037a",
+          "note": "提醒主状态"
+        },
+        {
+          "id": "new-with-history-expanded",
+          "label": "管家提醒 / 有新消息 · 历史已展开",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1788-357",
+          "file": "references/screens/reminders/new-with-history-expanded.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "a73912af5a427ff40cf15b0ca958e01337f74ed387cce6460b1b9069e5de946b"
+        },
+        {
+          "id": "empty-with-history",
+          "label": "管家提醒 / 无新消息 · 有历史",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1803-626",
+          "file": "references/screens/reminders/empty-with-history.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "6eebf46b43afec95300ae02a9f7f179300f88ebcbede24fa29b71e5d9162f7ab"
+        },
+        {
+          "id": "empty-no-history",
+          "label": "管家提醒 / 无新消息 · 无历史",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1803-742",
+          "file": "references/screens/reminders/empty-no-history.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "7c45f8b30c02ccd16c380fadf61fd1d6e68f64d272e8f96dd97db9976f21ef70"
+        },
+        {
+          "id": "new-no-history",
+          "label": "管家提醒 / 有新消息 · 无历史",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1803-800",
+          "file": "references/screens/reminders/new-no-history.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "54906ca1ffeeda6f9bfe8175c1b40e1614e200b53f711183050e9abed358f8bf"
+        },
+        {
+          "id": "reminder-settings",
+          "label": "管家提醒 / 提醒设置",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1945-874",
+          "file": "references/screens/reminders/reminder-settings.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "d7a024819179372d025c5a51b764af758f7ddfbef6a7773d2bd0f17983256363"
+        },
+        {
+          "id": "holdings-choice",
+          "label": "管家提醒 / 持仓选择",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1946-1098",
+          "file": "references/screens/reminders/holdings-choice.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "705f63f528f72e9873a6c078a8cd17eb90446ef375d8e6e19dc6f6a5cffd85d0"
+        }
+      ]
+    },
+    {
+      "id": "investment-tools",
+      "label": "投资工具",
+      "frames": [
+        {
+          "id": "daily-valuation",
+          "label": "投资工具 / 每日估值",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1491-181",
+          "file": "references/screens/investment-tools/daily-valuation.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "1d5d7c6d1dfa9983dc24bdfbbceeb73721babbbfe1b9009e2c03f66401d23f39"
+        },
+        {
+          "id": "valuation-table-alert",
+          "label": "投资工具 / 指数估值表弹层",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=2492-3757",
+          "file": "references/screens/investment-tools/valuation-table-alert.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "ab77b15d60c19f475bfa475e9834142525067dbe58613cbb1da4fdc5522d6f1a",
+          "note": "估值表上居中提示框"
+        },
+        {
+          "id": "index-valuation-topic",
+          "label": "投资工具 / 指数估值专题",
+          "kind": "reference",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1955-1326",
+          "file": "references/screens/investment-tools/index-valuation-topic.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "98e0ca9420a9a7fdfa15cf2d03f4c598108c1e39658abc8e980ed92bd33d27f0",
+          "note": "导出画板带暗色遮罩，保留为方案参考"
+        },
+        {
+          "id": "valuation-explained",
+          "label": "投资工具 / 估值详解",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3390-549",
+          "file": "references/screens/investment-tools/valuation-explained.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "894245ed18532c6c6c17d0628dc6a182e9015cf818acfa27e1b0fa8baa5dad00",
+          "note": "底部说明弹层"
+        },
+        {
+          "id": "index-signal",
+          "label": "投资工具 / 指数风向标",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=862-1365",
+          "file": "references/screens/investment-tools/index-signal.png",
+          "size_px": [
+            750,
+            4943
+          ],
+          "sha256": "8d27a36b73d1165568fea39b70644399c0c57fd3495ab67e113baa193fc6b761",
+          "detail_crops": [
+            {
+              "file": "references/detail/index-signal/01.png",
+              "y_px": [
+                0,
+                1640
+              ]
+            },
+            {
+              "file": "references/detail/index-signal/02.png",
+              "y_px": [
+                1540,
+                3180
+              ]
+            },
+            {
+              "file": "references/detail/index-signal/03.png",
+              "y_px": [
+                3080,
+                4720
+              ]
+            },
+            {
+              "file": "references/detail/index-signal/04.png",
+              "y_px": [
+                4620,
+                4943
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "invest-at-230",
+      "label": "投资两点半",
+      "frames": [
+        {
+          "id": "early-concept",
+          "label": "投资两点半 / 早期方案",
+          "kind": "reference",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1494-1218",
+          "file": "references/screens/invest-at-230/early-concept.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "ac47f1e59e262bb5a1dc471ae49aef81f6f2ff7c9e18e05f31de8a3ecd905f50",
+          "note": "独立历史方案"
+        },
+        {
+          "id": "midday-index-concept",
+          "label": "投资两点半 / 指数午间版",
+          "kind": "reference",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=1955-1177",
+          "file": "references/screens/invest-at-230/midday-index-concept.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "3095beda6433ba372fc5c7961dae9e1492363380e9382e7f04b93bebde32e06c",
+          "note": "独立历史方案，原稿带暗色遮罩"
+        },
+        {
+          "id": "market-open",
+          "label": "投资两点半 / 交易中",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=4342-1051",
+          "file": "references/screens/invest-at-230/market-open.png",
+          "size_px": [
+            750,
+            1964
+          ],
+          "sha256": "db965d20950a72d6c95a9592ef90186b8e630435c2fe77f147f69c6983f22781",
+          "note": "交易中状态"
+        },
+        {
+          "id": "market-closed",
+          "label": "投资两点半 / 收盘后",
+          "kind": "state",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=4342-1278",
+          "file": "references/screens/invest-at-230/market-closed.png",
+          "size_px": [
+            750,
+            1964
+          ],
+          "sha256": "1aabd0145126d7ec06222ed1b11ae2f92d9246c1c070682f2303a12d7c3ea168",
+          "note": "收盘后状态"
+        },
+        {
+          "id": "fund-flow-explained",
+          "label": "投资两点半 / 资金怎么看弹层",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=4403-605",
+          "file": "references/screens/invest-at-230/fund-flow-explained.png",
+          "size_px": [
+            750,
+            801
+          ],
+          "sha256": "7dc89174ebc879ed07214bac3de4f414fd953e1dced08959b626cdfef03034b6",
+          "note": "独立的半屏说明参考，非完整视口"
+        }
+      ]
+    },
+    {
+      "id": "content-sharing",
+      "label": "内容分享",
+      "frames": [
+        {
+          "id": "article-details",
+          "label": "内容分享 / 文章详情",
+          "kind": "screen",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3449-731",
+          "file": "references/screens/content-sharing/article-details.png",
+          "size_px": [
+            750,
+            1719
+          ],
+          "sha256": "ae5d3cdb81c3dab6d51a7d1c4f26625cdb3cf6a133fc1a2f042dfa2e2c1ac66f"
+        }
+      ]
+    },
+    {
+      "id": "wechat-service",
+      "label": "夏管家微信",
+      "frames": [
+        {
+          "id": "direct-non-money",
+          "label": "夏管家微信 / 直销非货 10 万以上",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3632-2817",
+          "file": "references/screens/wechat-service/direct-non-money.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "0fe91d4f66d54810195970bbd75778611f2f695f37f5c392d02e5fa69daee067"
+        },
+        {
+          "id": "distribution-non-money",
+          "label": "夏管家微信 / 代销非货 10 万以上",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3632-2991",
+          "file": "references/screens/wechat-service/distribution-non-money.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "4a1d1b0ea51152af391899cfcb9d4f3f4ab059d17303ef1a9053d4ebe1e10f49"
+        },
+        {
+          "id": "direct-index",
+          "label": "夏管家微信 / 直销指数型客户",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3632-3037",
+          "file": "references/screens/wechat-service/direct-index.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "a9b14e2fe8b5936263ffb27a34d53c7ade867380991cbd5c484b781464eb6afe"
+        },
+        {
+          "id": "distribution-index",
+          "label": "夏管家微信 / 代销指数型客户",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3632-3083",
+          "file": "references/screens/wechat-service/distribution-index.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "360d6393ff3a2d3dd02505f9c3cb677515f82458d4031bb9597db4e067a1cef7"
+        },
+        {
+          "id": "new-user",
+          "label": "夏管家微信 / 新用户",
+          "kind": "overlay",
+          "source_figma": "https://www.figma.com/design/4uckCBF4HEkhbi4PAgerzV?node-id=3632-3129",
+          "file": "references/screens/wechat-service/new-user.png",
+          "size_px": [
+            750,
+            1624
+          ],
+          "sha256": "cdabf9f1def5d2cc19ebe90a381ce03d433a21e6da01d54d356477031dae39ca"
+        }
+      ]
+    }
+  ],
+  "frame_count": 33
+}
